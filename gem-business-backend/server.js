@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const authRoutes = require("./Routes/authRoutes.js");
 const productRoutes = require("./Routes/productRoutes.js")
+const orderRoutes = require("./Routes/orderRoute.js")
 
 dotenv.config();
 
@@ -26,6 +27,7 @@ app.get("/", (req, res) => {
 
 app.use("/",authRoutes);
 app.use("/products",productRoutes);
+app.use("/order", orderRoutes);
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
