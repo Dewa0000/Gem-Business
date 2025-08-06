@@ -27,7 +27,8 @@ app.get("/", (req, res) => {
 
 app.use("/",authRoutes);
 app.use("/products",productRoutes);
-app.use("/order", orderRoutes);
+app.use("/checkout", orderRoutes);
+app.use("/my-orders",orderRoutes);
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
