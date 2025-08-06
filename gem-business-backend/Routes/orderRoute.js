@@ -33,7 +33,7 @@ router.get("/", authMiddleware, async (req,res) => {
         const allOrder = await Order.find({});
         console.log("All Orders:",allOrder);
 
-        const orders = await Order.find({userId: req.userId}).sort({createdAt: -1});
+        const orders = await Order.find({user: req.userId}).sort({createdAt: -1});
         const mappedOrders = orders.map((order) => 
         ({
             id: order._id,
