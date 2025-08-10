@@ -8,7 +8,7 @@ const postCart = async (req,res) => {
        res.status(400).json({message: "Invalid User ID or No Items in Cart"})
    }
 
-   const userIdStr = userId.String();
+   const userIdStr = userId.toString();
    const existingCart = await Cart.findOne({user : userIdStr});
 
    if(existingCart){
@@ -17,7 +17,7 @@ const postCart = async (req,res) => {
     return res.status(200).json({message: "cart updated", cart: existingCart})
    }
 
-   const newCart = new Cart({userIdStr,items});
+   const newCart = new Cart({user: userIdStr,items});
    console.log("New Cart:", newCart);
    await newCart.save();
 
