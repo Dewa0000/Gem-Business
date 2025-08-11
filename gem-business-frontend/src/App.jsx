@@ -10,9 +10,7 @@ function App() {
      <>
      <Router>
       <Routes>
-        <Route path='/signup' element= {<SignUpForm/>}>
-      
-        </Route>
+        <Route path='/signup' element= {<SignUpForm/>}/>
       </Routes>
      </Router>
         
