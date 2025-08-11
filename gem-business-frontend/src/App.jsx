@@ -8,7 +8,14 @@ function App() {
 
   return (
      <>
-        <SignUpForm/>
+     <Router>
+      <Routes>
+        <Route path='/signup' element= {<SignUpForm/>}>
+      
+        </Route>
+      </Routes>
+     </Router>
+        
      </>
   )
 }
