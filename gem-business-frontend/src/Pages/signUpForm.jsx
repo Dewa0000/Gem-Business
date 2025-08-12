@@ -52,7 +52,7 @@ const SignUpForm = () => {
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="space-y-4 rounded-md shadow-sm">
-            <InputField
+            <input
               label="Username"
               id="username"
               name="username"
@@ -63,7 +63,7 @@ const SignUpForm = () => {
               value={formData.username}
               onChange={handleChange}
             />
-            <InputField
+            <input
               label="Email address"
               id="email-address"
               name="email"
@@ -74,7 +74,7 @@ const SignUpForm = () => {
               value={formData.email}
               onChange={handleChange}
             />
-            <InputField
+            <input
               label="Password"
               id="password"
               name="password"
@@ -85,7 +85,7 @@ const SignUpForm = () => {
               value={formData.password}
               onChange={handleChange}
             />
-            <InputField
+            <input
               label="Mobile Number"
               id="mobile-number"
               name="moNumber"
