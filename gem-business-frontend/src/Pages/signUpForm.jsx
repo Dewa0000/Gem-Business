@@ -97,9 +97,9 @@ const SignUpForm = () => {
               onChange={handleChange}
             />
           </div>
-          <Button type="submit" className="button_primary">
+          <button type="submit" className="button_primary">
             Sign Up
-          </Button>
+          </button>
         </form>
         <p className="mt-2 text-center text-sm text-[var(--text-secondary)]">
           Already have an account?{" "}
