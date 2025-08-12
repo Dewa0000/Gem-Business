@@ -27,7 +27,7 @@ const SignUpForm = () => {
     const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://gem-business.onrender.com"
     try{
       const res = await fetch(`${backendUrl}/signup`, {
-        type: "POST",
+        method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({
           username: formData.username,
@@ -36,11 +36,11 @@ const SignUpForm = () => {
           moNumber: formData.moNumber
         })
       })
-      if(!res.ok) return res.json({message: "Failed to load resource"})
+      if(!res.ok) throw new Error("Unable to load Resource")
         const data = await res.json();
-      setFormData(data);
+      navigate("/login")
     }catch(err){
-      res.status(400).json({message: err.message})
+      setError("Error message:",err.mesaage)
     }
   };
 
