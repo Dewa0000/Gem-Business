@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import InputField from "./InputField";
 import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 
 const SignUpForm = () => {
+    const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -12,15 +14,34 @@ const SignUpForm = () => {
     moNumber: "",
   });
 
+  const [error,setError] = useState("");
+  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission (e.g., API call)
-    console.log("Form submitted:", formData);
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://gem-business.onrender.com"
+    try{
+      const res = await fetch(`${backendUrl}/signup`, {
+        type: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+          username: formData.username,
+          email: formData.email,
+          password: formData.password,
+          moNumber: formData.moNumber
+        })
+      })
+      if(!res.ok) return res.json({message: "Failed to load resource"})
+        const data = await res.json();
+      setFormData(data);
+    }catch(err){
+      res.status(400).json({message: err.message})
+    }
   };
 
   return (
