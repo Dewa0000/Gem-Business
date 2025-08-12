@@ -38,7 +38,8 @@ const SignUpForm = () => {
         const data = await res.json();
       navigate("/login")
     }catch(err){
-      setError("Error message:",err.mesaage)
+      setError(`Error message: ${err.message}`);
+
     }
   };
 
