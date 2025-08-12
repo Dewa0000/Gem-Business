@@ -1,7 +1,6 @@
 // src/components/SignUpForm.jsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import InputField from "./InputField";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 
