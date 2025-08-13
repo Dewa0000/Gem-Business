@@ -1,10 +1,8 @@
-// src/components/SignUpForm.jsx
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUpForm = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -12,8 +10,7 @@ const SignUpForm = () => {
     moNumber: "",
   });
 
-  const [error,setError] = useState("");
-  
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,24 +19,23 @@ const SignUpForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://gem-business.onrender.com"
-    try{
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://gem-business.onrender.com";
+    try {
       const res = await fetch(`${backendUrl}/auth/signup`, {
         method: "POST",
-        headers: {"Content-Type": "application/json"},
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           userName: formData.username,
           email: formData.email,
           password: formData.password,
-          moNumber: formData.moNumber
-        })
-      })
-      if(!res.ok) throw new Error("Unable to load Resource")
-        const data = await res.json();
-      navigate("/login")
-    }catch(err){
+          moNumber: formData.moNumber,
+        }),
+      });
+      if (!res.ok) throw new Error("Unable to load Resource");
+      const data = await res.json();
+      navigate("/login");
+    } catch (err) {
       setError(`Error message: ${err.message}`);
-
     }
   };
 
@@ -63,6 +59,7 @@ const SignUpForm = () => {
               placeholder="Enter your username"
               value={formData.username}
               onChange={handleChange}
+              className="block w-full px-5 py-3 h-12 border-2 border-gray-300 rounded-lg shadow-md focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent hover:border-[var(--primary-color)] hover:shadow-lg placeholder:text-gray-500 placeholder:font-medium"
             />
             <input
               label="Email address"
@@ -74,6 +71,7 @@ const SignUpForm = () => {
               placeholder="Enter your email"
               value={formData.email}
               onChange={handleChange}
+              className="block w-full px-5 py-3 h-12 border-2 border-gray-300 rounded-lg shadow-md focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent hover:border-[var(--primary-color)] hover:shadow-lg placeholder:text-gray-500 placeholder:font-medium"
             />
             <input
               label="Password"
@@ -85,6 +83,7 @@ const SignUpForm = () => {
               placeholder="Enter your password"
               value={formData.password}
               onChange={handleChange}
+              className="block w-full px-5 py-3 h-12 border-2 border-gray-300 rounded-lg shadow-md focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent hover:border-[var(--primary-color)] hover:shadow-lg placeholder:text-gray-500 placeholder:font-medium"
             />
             <input
               label="Mobile Number"
@@ -96,6 +95,7 @@ const SignUpForm = () => {
               placeholder="Enter your mobile number"
               value={formData.moNumber}
               onChange={handleChange}
+              className="block w-full px-5 py-3 h-12 border-2 border-gray-300 rounded-lg shadow-md focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent hover:border-[var(--primary-color)] hover:shadow-lg placeholder:text-gray-500 placeholder:font-medium"
             />
           </div>
           <button type="submit" className="button_primary">
