@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navigate, Link } from "react-router-dom";
 
 function LoginForm() {
+    const [error,setError] = useState("")
   return (
     <div
       className="relative flex size-full min-h-screen flex-col bg-white overflow-x-hidden"
