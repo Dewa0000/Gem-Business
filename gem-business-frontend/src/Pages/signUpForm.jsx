@@ -28,7 +28,7 @@ const SignUpForm = () => {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({
-          username: formData.username,
+          userName: formData.username,
           email: formData.email,
           password: formData.password,
           moNumber: formData.moNumber
