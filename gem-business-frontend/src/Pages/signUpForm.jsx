@@ -41,61 +41,31 @@ const SignUpForm = () => {
 
   return (
     <div
-      className="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
-      style={{ fontFamily: 'Inter, "Noto Sans", sans-serif' }}
+      className="relative flex size-full min-h-screen flex-col bg-[#122118] dark group/design-root overflow-x-hidden"
+      style={{ fontFamily: '"Plus Jakarta Sans", "Noto Sans", sans-serif' }}
     >
       <div className="layout-container flex h-full grow flex-col">
-        <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3">
-          <div className="flex items-center gap-4 text-[#111418]">
-            <div className="size-4">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </div>
-            <h2 className="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">Luxe Gems</h2>
-          </div>
-          <div className="flex flex-1 justify-end gap-8">
-            <div className="flex items-center gap-9">
-              <a className="text-[#111418] text-sm font-medium leading-normal" href="#">
-                Shop
-              </a>
-              <a className="text-[#111418] text-sm font-medium leading-normal" href="#">
-                About
-              </a>
-              <a className="text-[#111418] text-sm font-medium leading-normal" href="#">
-                Contact
-              </a>
-            </div>
-            <Link
-              to="/login"
-              className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-bold leading-normal tracking-[0.015em]"
-            >
-              <span className="truncate">Sign In</span>
-            </Link>
-          </div>
-        </header>
         <div className="px-40 flex flex-1 justify-center py-5">
           <div className="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1">
             <div className="@container">
               <div className="@[480px]:px-4 @[480px]:py-3">
                 <div
-                  className="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-white @[480px]:rounded-lg min-h-[218px]"
+                  className="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-[#122118] @[480px]:rounded-lg min-h-[218px]"
                   style={{
-                    backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHCH8sv7JSR36UBFc5fB2UxURSzdCgpewi647_Y3OHmKVKC9_XqjS8CZPIWms1oks8Cx_u_I86UWyA958pdsfoGVCnKlTJwlxtckL5aJ_cgSCHNYPSx0SEfedKOM99-2KpfwquVsaS4RgcL1wGIGeUclg-fJQk94UO6rDLD8dbcVtMGAznD6too9XhWX3zoK_WbPx9BVXaLhq3ePp03tYV2jTKqhDreFay3pBjYBIAE1cfYQx2GT4fbLL6KC2d5beG4xMn_p-Mjdw")',
+                    backgroundImage:
+                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAkdDRTUXcmAnIV_CePb6clyz6ap2x1rtGTlCChFo5Qma0vTwTKfhviD28YWQRWiidFtf2cgeBOgqRngxP_sZVepFshAUdi8xLP13DazwVkBJUNDJuftY0lqgAg9ZkXS81vV-XDynzsmI0XbTalPOn0YI5q7xGM8bfKa1xml4VHq55QgOIncOPyjaCkG7SEypHNmdWhWsdv5RMvqY5vFvBagx-777L-LNVbpUYqlIP_VvJeCWGnLZdnkh3EGmQCqGWv_jOJ4T5gCCc")',
                   }}
                 ></div>
               </div>
             </div>
-            <h2 className="text-[#111418] tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">
+            <h2 className="text-white tracking-tight text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">
               Create your account
             </h2>
-            <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+            {error && <p className="text-red-500 text-center px-4">{error}</p>}
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
                 <label className="flex flex-col min-w-40 flex-1">
-                  <p className="text-[#111418] text-base font-medium leading-normal pb-2">Username</p>
+                  <p className="text-white text-base font-medium leading-normal pb-2">Username</p>
                   <input
                     label="Username"
                     id="username"
@@ -106,13 +76,13 @@ const SignUpForm = () => {
                     placeholder="Enter your username"
                     value={formData.username}
                     onChange={handleChange}
-                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] h-14 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
+                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#366347] bg-[#1b3124] focus:border-[#39e079] h-14 placeholder:text-[#96c5a8] p-[15px] text-base font-normal leading-normal"
                   />
                 </label>
               </div>
               <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
                 <label className="flex flex-col min-w-40 flex-1">
-                  <p className="text-[#111418] text-base font-medium leading-normal pb-2">Email Address</p>
+                  <p className="text-white text-base font-medium leading-normal pb-2">Email Address</p>
                   <input
                     label="Email address"
                     id="email-address"
@@ -123,13 +93,13 @@ const SignUpForm = () => {
                     placeholder="Enter your email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] h-14 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
+                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#366347] bg-[#1b3124] focus:border-[#39e079] h-14 placeholder:text-[#96c5a8] p-[15px] text-base font-normal leading-normal"
                   />
                 </label>
               </div>
               <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
                 <label className="flex flex-col min-w-40 flex-1">
-                  <p className="text-[#111418] text-base font-medium leading-normal pb-2">Password</p>
+                  <p className="text-white text-base font-medium leading-normal pb-2">Password</p>
                   <input
                     label="Password"
                     id="password"
@@ -140,13 +110,13 @@ const SignUpForm = () => {
                     placeholder="Enter your password"
                     value={formData.password}
                     onChange={handleChange}
-                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] h-14 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
+                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#366347] bg-[#1b3124] focus:border-[#39e079] h-14 placeholder:text-[#96c5a8] p-[15px] text-base font-normal leading-normal"
                   />
                 </label>
               </div>
               <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
                 <label className="flex flex-col min-w-40 flex-1">
-                  <p className="text-[#111418] text-base font-medium leading-normal pb-2">Mobile Number</p>
+                  <p className="text-white text-base font-medium leading-normal pb-2">Mobile Number</p>
                   <input
                     label="Mobile Number"
                     id="mobile-number"
@@ -157,22 +127,22 @@ const SignUpForm = () => {
                     placeholder="Enter your mobile number"
                     value={formData.moNumber}
                     onChange={handleChange}
-                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] h-14 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
+                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#366347] bg-[#1b3124] focus:border-[#39e079] h-14 placeholder:text-[#96c5a8] p-[15px] text-base font-normal leading-normal"
                   />
                 </label>
               </div>
               <div className="flex px-4 py-3 justify-center">
                 <button
                   type="submit"
-                  className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0d80f2] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                  className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 flex-1 bg-[#39e079] text-[#122118] text-sm font-bold leading-normal tracking-[0.015em]"
                 >
                   <span className="truncate">Sign Up</span>
                 </button>
               </div>
             </form>
-            <p className="mt-2 text-center text-sm text-[#60758a]">
+            <p className="mt-2 text-center text-sm text-[#96c5a8]">
               Already have an account?{" "}
-              <Link to="/login" className="font-medium text-[#0d80f2] hover:text-orange-500">
+              <Link to="/login" className="font-medium text-[#39e079] hover:text-orange-500">
                 Sign in
               </Link>
             </p>
