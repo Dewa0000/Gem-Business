@@ -38,16 +38,16 @@ const ProductsPage = () => {
                     </div>
                     <div className="flex gap-2 px-4">
                       <button
-                        type="submit"
-                        onSubmit={() => {}}
-                        className="flex-1 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#39e079] text-[#122118] text-sm font-bold leading-normal tracking-[0.015em]"
+                        type="button"
+                        onClick={() => {}}
+                        className="flex-1 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-2.5 bg-[#1b3124] text-white text-sm font-bold leading-normal tracking-[0.015em]"
                       >
                         <span className="truncate">Add to Cart</span>
                       </button>
                       <button
-                        type="submit"
-                        onSubmit={() => {}}
-                        className="flex-1 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#39e079] text-[#122118] text-sm font-bold leading-normal tracking-[0.015em]"
+                        type="button"
+                        onClick={() => {}}
+                        className="flex-1 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-2.5 bg-[#1b3124] text-white text-sm font-bold leading-normal tracking-[0.015em]"
                       >
                         <span className="truncate">Buy Now</span>
                       </button>
