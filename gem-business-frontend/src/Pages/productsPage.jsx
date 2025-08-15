@@ -2,7 +2,7 @@ import React from "react";
 import FetchProducts from "../Hooks/useFetchProducts";
 
 const ProductsPage = () => {
-    const [products,error] = FetchProducts();
+    const {products,error} = FetchProducts();
     return (
     <>
          <div>
