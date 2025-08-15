@@ -120,6 +120,7 @@ function LoginForm() {
               <div className="flex px-4 py-3">
                 <button
                   type="submit"
+                  onSubmit={() => handleSubmit()}
                   className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 flex-1 bg-[#39e079] text-[#122118] text-sm font-bold leading-normal tracking-[0.015em]"
                 >
                   <span className="truncate">Log In</span>
