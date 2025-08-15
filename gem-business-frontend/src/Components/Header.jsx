@@ -16,23 +16,23 @@ const Header = () => {
 
       <div className="flex flex-1 justify-end gap-8">
         <div className="flex items-center gap-9">
-          <Link className="text-sm font-medium leading-normal" to="/new-arrivals">
-            New Arrivals
+          <Link className="text-sm font-medium leading-normal" to="/">
+            Home
           </Link>
-          <Link className="text-sm font-medium leading-normal" to="/rings">
-            Rings
+          <Link className="text-sm font-medium leading-normal" to="/products">
+            Gemstones
           </Link>
           <Link className="text-sm font-medium leading-normal" to="/necklaces">
-            Necklaces
+            About Us
           </Link>
           <Link className="text-sm font-medium leading-normal" to="/earrings">
-            Earrings
+            Shop
           </Link>
           <Link className="text-sm font-medium leading-normal" to="/bracelets">
-            Bracelets
+            Gem Recommendation
           </Link>
           <Link className="text-sm font-medium leading-normal" to="/sale">
-            Sale
+            Contact Us
           </Link>
         </div>
 
