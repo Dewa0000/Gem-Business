@@ -6,7 +6,7 @@ const ProductsPage = () => {
     return (
     <>
          <div>
-            {products.map((product) => {
+            {Array.isArray(products) && products.map((product) => {
                 return (
                     <div>
                         {product.name}
