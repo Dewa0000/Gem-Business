@@ -7,6 +7,7 @@ import Header from './Components/Header'
 import Footer from './Components/Footer'
 import HomePage from './Pages/HomePage'
 import ProductsPage from './Pages/productsPage'
+import AboutUs from "./Pages/AboutUs"
 
 function App() {
   
@@ -20,6 +21,7 @@ function App() {
         <Route path='/signup' element= {<SignUpForm/>}/>
         <Route path='/login' element = {<LoginForm/>}/>
         <Route path='/products' element = {<ProductsPage/>}></Route>
+        <Route path='/about-us' element = {<AboutUs/>}></Route>
       </Routes>
       <Footer/>
      </Router>
