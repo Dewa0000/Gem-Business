@@ -63,7 +63,7 @@ const ProductsPage = () => {
                     <div
                       className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
                       style={{
-                        backgroundImage: `url(${product.imageUrl || "https://via.placeholder.com/158"})`,
+                        backgroundImage: `url(${product.image || "https://via.placeholder.com/158"})`,
                       }}
                     ></div>
                     <div>
