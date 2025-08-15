@@ -5,6 +5,7 @@ import './App.css'
 import LoginForm from './Pages/loginForm'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
+import HomePage from './Pages/HomePage'
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
      <Router>
       <Header/>
       <Routes>
+        <Route path='/' element = {<HomePage/>}></Route>
         <Route path='/signup' element= {<SignUpForm/>}/>
         <Route path='/login' element = {<LoginForm/>}/>
       </Routes>
