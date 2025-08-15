@@ -17,12 +17,24 @@ const Header = () => {
 
       <div className="flex flex-1 justify-end gap-8">
         <div className="flex items-center gap-9">
-          <a className="text-white text-sm font-medium leading-normal" href="#">New Arrivals</a>
-          <a className="text-white text-sm font-medium leading-normal" href="#">Rings</a>
-          <a className="text-white text-sm font-medium leading-normal" href="#">Necklaces</a>
-          <a className="text-white text-sm font-medium leading-normal" href="#">Earrings</a>
-          <a className="text-white text-sm font-medium leading-normal" href="#">Bracelets</a>
-          <a className="text-white text-sm font-medium leading-normal" href="#">Sale</a>
+          <Link className="text-white text-sm font-medium leading-normal" to="/new-arrivals">
+            New Arrivals
+          </Link>
+          <Link className="text-white text-sm font-medium leading-normal" to="/rings">
+            Rings
+          </Link>
+          <Link className="text-white text-sm font-medium leading-normal" to="/necklaces">
+            Necklaces
+          </Link>
+          <Link className="text-white text-sm font-medium leading-normal" to="/earrings">
+            Earrings
+          </Link>
+          <Link className="text-white text-sm font-medium leading-normal" to="/bracelets">
+            Bracelets
+          </Link>
+          <Link className="text-white text-sm font-medium leading-normal" to="/sale">
+            Sale
+          </Link>
         </div>
 
         <div className="flex gap-2">
