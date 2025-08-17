@@ -9,12 +9,14 @@ import HomePage from './Pages/HomePage'
 import ProductsPage from './Pages/productsPage'
 import AboutUs from "./Pages/AboutUs"
 import CartReviewPage from './Pages/CartPage'
+import { CartProvider } from './Context/cartContext'
 
 function App() {
   
 
   return (
      <>
+     <CartProvider>
      <Router>
       <Header/>
       <Routes>
@@ -27,7 +29,7 @@ function App() {
       </Routes>
       <Footer/>
      </Router>
-        
+     </CartProvider>
      </>
   )
 }

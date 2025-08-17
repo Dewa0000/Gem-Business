@@ -1,11 +1,18 @@
 import React from "react";
+import { useCart } from "../Context/cartContext";
 
 const CartReviewPage = () => {
+    const {cart, setCart} = useCart();
   return (
     <div
       className="relative flex size-full min-h-screen flex-col bg-[#122118] group/design-root overflow-x-hidden"
       style={{ fontFamily: '"Plus Jakarta Sans", "Noto Sans", sans-serif' }}
     >
+        {Array.isArray(cart) && cart.map((item,index) => {
+            return (
+                <div key={index}>{item.name}</div>
+            )
+        })}
       <div className="layout-container flex h-full grow flex-col">
         <div className="px-40 flex flex-1 justify-center py-5">
           <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
