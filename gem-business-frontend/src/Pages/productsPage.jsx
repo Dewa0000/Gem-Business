@@ -40,14 +40,14 @@ const ProductsPage = () => {
                       <button
                         type="button"
                         onClick={() => {}}
-                        className="flex-1 min-w-[504px] max-w-[310px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-2.5 bg-[#22d760] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#18b64a] transition-colors"
+                        className="flex-1 min-w-[84px] max-w-[310px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-2.5 bg-[#22d760] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#18b64a] transition-colors"
                       >
                         <span className="truncate">Add to Cart</span>
                       </button>
                       <button
                         type="button"
                         onClick={() => {}}
-                        className="flex-1 min-w-[50px] max-w-[310px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-2.5 bg-[#22d760] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#18b64a] transition-colors"
+                        className="flex-1 min-w-[84px] max-w-[310px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-2.5 bg-[#22d760] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#18b64a] transition-colors"
                       >
                         <span className="truncate">Buy Now</span>
                       </button>
