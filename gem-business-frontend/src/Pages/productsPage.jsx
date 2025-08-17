@@ -36,18 +36,18 @@ const ProductsPage = () => {
                         ${product.price || "N/A"}
                       </p>
                     </div>
-                    <div className="flex gap-2 px-4">
+                    <div className="flex items-center justify-center gap-2 px-4">
                       <button
                         type="button"
                         onClick={() => {}}
-                        className="flex-1 min-w-[84px] max-w-[310px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-2.5 bg-[#22d760] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#18b64a] transition-colors"
+                        className="flex-1 min-w-[84px] max-w-[310px] cursor-pointer  overflow-hidden rounded-lg h-10 px-2.5 bg-[#22d760] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#18b64a] transition-colors"
                       >
                         <span className="truncate">Add to Cart</span>
                       </button>
                       <button
                         type="button"
                         onClick={() => {}}
-                        className="flex-1 min-w-[84px] max-w-[310px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-2.5 bg-[#22d760] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#18b64a] transition-colors"
+                        className="flex-1 min-w-[84px] max-w-[310px] cursor-pointer  overflow-hidden rounded-lg h-10 px-2.5 bg-[#22d760] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#18b64a] transition-colors"
                       >
                         <span className="truncate">Buy Now</span>
                       </button>
