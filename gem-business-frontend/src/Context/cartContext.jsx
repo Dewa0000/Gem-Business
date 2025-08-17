@@ -34,6 +34,10 @@ export const CartProvider = ({ children }) => {
 
     }, [])
 
+    const addtoCart = (product) => {
+       const exists = cart.find()
+    }
+
     return (
         <CartContext.Provider value={{ cart, setCart }}>
             {children}
