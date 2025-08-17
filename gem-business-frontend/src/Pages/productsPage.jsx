@@ -20,42 +20,52 @@ const ProductsPage = () => {
             </div>
 
             {/* Product Grid */}
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-6 p-4">
               {Array.isArray(products) &&
                 products.map((product) => (
-                  <div key={product._id} className="flex flex-col gap-3 pb-3">
+                  <div
+                    key={product._id}
+                    className="flex flex-col gap-3 pb-4 bg-[#0f1a13] rounded-xl p-3 shadow-md"
+                  >
+                    {/* Product Image */}
                     <div
                       className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
                       style={{
-                        backgroundImage: `url(${product.image || "https://via.placeholder.com/158"})`,
+                        backgroundImage: `url(${product.image || "https://via.placeholder.com/220"})`,
                       }}
                     ></div>
-                    <div>
-                      <p className="text-white text-base font-medium leading-normal">{product.name}</p>
-                      <p className="text-[#96c5a8] text-sm font-normal leading-normal">
+
+                    {/* Product Name & Price */}
+                    <div className="flex flex-col">
+                      <p className="text-white text-base font-medium leading-tight">
+                        {product.name}
+                      </p>
+                      <p className="text-[#96c5a8] text-sm font-normal">
                         ${product.price || "N/A"}
                       </p>
                     </div>
-                    <div className="flex items-center justify-center gap-3 px-4">
+
+                    {/* Buttons */}
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3 px-2">
                       <button
                         type="button"
                         onClick={() => { }}
-                        className="min-w-[120px] max-w-[180px] cursor-pointer rounded-lg h-10 px-4 bg-[#22d760] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#18b64a] transition-colors"
+                        className="w-full sm:w-auto min-w-[120px] cursor-pointer rounded-lg h-10 px-4 bg-[#22d760] text-white text-sm font-bold hover:bg-[#18b64a] transition-colors"
                       >
                         Add to Cart
                       </button>
                       <button
                         type="button"
                         onClick={() => { }}
-                        className="min-w-[120px] max-w-[180px] cursor-pointer rounded-lg h-10 px-4 bg-[#22d760] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#18b64a] transition-colors"
+                        className="w-full sm:w-auto min-w-[120px] cursor-pointer rounded-lg h-10 px-4 bg-[#22d760] text-white text-sm font-bold hover:bg-[#18b64a] transition-colors"
                       >
                         Buy Now
                       </button>
                     </div>
-
                   </div>
                 ))}
             </div>
+
           </div>
         </div>
       </div>
