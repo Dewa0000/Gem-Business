@@ -36,22 +36,23 @@ const ProductsPage = () => {
                         ${product.price || "N/A"}
                       </p>
                     </div>
-                    <div className="flex items-center justify-center gap-2 px-4">
+                    <div className="flex items-center justify-center gap-3 px-4">
                       <button
                         type="button"
-                        onClick={() => {}}
-                        className="flex-1 min-w-[84px] max-w-[310px] cursor-pointer  overflow-hidden rounded-lg h-10 px-2.5 bg-[#22d760] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#18b64a] transition-colors"
+                        onClick={() => { }}
+                        className="min-w-[120px] max-w-[180px] cursor-pointer rounded-lg h-10 px-4 bg-[#22d760] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#18b64a] transition-colors"
                       >
-                        <span className="truncate">Add to Cart</span>
+                        Add to Cart
                       </button>
                       <button
                         type="button"
-                        onClick={() => {}}
-                        className="flex-1 min-w-[84px] max-w-[310px] cursor-pointer  overflow-hidden rounded-lg h-10 px-2.5 bg-[#22d760] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#18b64a] transition-colors"
+                        onClick={() => { }}
+                        className="min-w-[120px] max-w-[180px] cursor-pointer rounded-lg h-10 px-4 bg-[#22d760] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#18b64a] transition-colors"
                       >
-                        <span className="truncate">Buy Now</span>
+                        Buy Now
                       </button>
                     </div>
+
                   </div>
                 ))}
             </div>
