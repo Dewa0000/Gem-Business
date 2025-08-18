@@ -46,6 +46,7 @@ export const CartProvider = ({ children }) => {
         updatedCart = [...cart,{...product,qty: 1}]
        }
        setCart(updatedCart)
+       syncCartWithBackend(updatedCart);
     }
 
     const syncCartWithBackend = async (updatedCart) => {
