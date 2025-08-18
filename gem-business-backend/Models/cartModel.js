@@ -17,7 +17,6 @@ const cartItemSchema = new mongoose.Schema({
 const cartSchema = new mongoose.Schema({
     user: {
         type: String,
-        ref: "Auth", // your user model
         required: true // set to true if cart only allowed for logged-in users
     },
     items: [cartItemSchema],

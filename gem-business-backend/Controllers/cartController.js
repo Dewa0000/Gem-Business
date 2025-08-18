@@ -4,7 +4,7 @@ const getCart = async (req, res) => {
     try {
         const userId = req.params.userId.toString();
         const cart = await Cart.findOne({ user: userId }).populate("items.product");
-
+        console.log(cart);
         if (!cart) {
             return res.json({ items: [] })
         }
@@ -20,7 +20,7 @@ const getCart = async (req, res) => {
                 _id: product._id,
                 name: product.name,
                 price: product.price,
-                qty: product.qty
+                qty: item.quantity
             };
 
         }).filter(Boolean);
