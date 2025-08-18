@@ -8,7 +8,7 @@ const CartReviewPage = () => {
       className="relative flex size-full min-h-screen flex-col bg-[#122118] group/design-root overflow-x-hidden"
       style={{ fontFamily: '"Plus Jakarta Sans", "Noto Sans", sans-serif' }}
     >
-        {Array.isArray(cart) && cart.map((item,index) => {
+        {Array.isArray(cart.items) && cart.items.map((item,index) => {
             return (
                 <div key={index}>{item.name}</div>
             )
