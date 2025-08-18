@@ -28,6 +28,7 @@ export const CartProvider = ({ children }) => {
                 
             }
             console.log(user._id);
+            console.log(data.items);
             fetchCart();
         } catch (err) {
             console.log("Failure in fetching products:", err.message)
