@@ -3,7 +3,7 @@ import { createContext, useContext, useState, useEffect } from "react";
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState({items: [], totalPrice: 0});
 
     useEffect(() => {
         const storedCart = localStorage.getItem("cart");
@@ -24,7 +24,7 @@ export const CartProvider = ({ children }) => {
             const fetchCart = async () => {
                 const res = await fetch(`${backendUrl}/cart/${user._id}`);
                 const data = await res.json();
-                setCart(Array.isArray(data.items) ? data.items : []);
+                setCart(data);
 
             }
             fetchCart();
