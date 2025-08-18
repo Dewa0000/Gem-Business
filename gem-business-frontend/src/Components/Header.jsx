@@ -22,16 +22,16 @@ const Header = () => {
           <Link className="text-sm font-medium leading-normal" to="/products">
             Gemstones
           </Link>
-          <Link className="text-sm font-medium leading-normal" to="/necklaces">
+          <Link className="text-sm font-medium leading-normal" to="/about-us">
             About Us
           </Link>
-          <Link className="text-sm font-medium leading-normal" to="/earrings">
+          <Link className="text-sm font-medium leading-normal" to="/products">
             Shop
           </Link>
-          <Link className="text-sm font-medium leading-normal" to="/bracelets">
+          <Link className="text-sm font-medium leading-normal" to="/gem-recommendation">
             Gem Recommendation
           </Link>
-          <Link className="text-sm font-medium leading-normal" to="/sale">
+          <Link className="text-sm font-medium leading-normal" to="/contact-us">
             Contact Us
           </Link>
         </div>

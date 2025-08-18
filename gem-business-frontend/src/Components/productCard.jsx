@@ -1,8 +1,10 @@
 import React from "react";
 import FetchProducts from "../Hooks/useFetchProducts";
+import { useCart } from "../Context/cartContext";
 
 function ProductCard(){
     const {products,error} = FetchProducts();
+    const {cart, setCart} = useCart();
     return (
         <>
         {Array.isArray(products) &&
@@ -40,7 +42,7 @@ function ProductCard(){
                       </button>
                       <button
                         type="button"
-                        onClick={() => { }}
+                        onClick={() => {addtoCart(product)}}
                         className="w-full sm:w-auto min-w-[120px] cursor-pointer rounded-lg h-10 px-4 bg-[#22d760] text-white text-sm font-bold hover:bg-[#18b64a] transition-colors"
                       >
                         Buy Now

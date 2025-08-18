@@ -35,7 +35,43 @@ export const CartProvider = ({ children }) => {
     }, [])
 
     const addtoCart = (product) => {
-       const exists = cart.find()
+       const exists = cart.find((item) => item._id === product._id);
+       let updatedCart;
+
+       if(exists){
+        updatedCart = cart.map((item) => {
+            return (item._id === product._id ? {...item, qty: item.qty + 1} : item)
+        })
+       }else{
+        updatedCart = [...cart,{...product,qty: 1}]
+       }
+       setCart(updatedCart)
+    }
+
+    const syncCartWithBackend = async (updatedCart) => {
+          try{
+            const cleanedCart = updatedCart.map(item => ({
+                 productId : item._id,
+                 qty : item.qty
+            }))
+            const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://gem-business.onrender.com";
+
+            const user = JSON.parse(localStorage.getItem("user"))
+            const userId = user?._id;
+
+            if(!userId){
+                console.log("No userId found in localStorage");
+                return
+            }
+
+            await fetch(`${backendUrl}/cart`, {
+                method: "POST",
+                headers : {"Content-Type" : "application/json"},
+                body : JSON.stringify({userId, items: cleanedCart})
+            })
+          }catch(err){
+            console.error("Failed to Sync Cart with Backend:", err.message )
+          }
     }
 
     return (
