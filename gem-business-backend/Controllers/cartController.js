@@ -2,7 +2,7 @@ const Cart = require("../Models/cartModel");
 
 const getCart = async (req, res) => {
     try {
-        const userId = req.params.userId;
+        const userId = new mongoose.Types.ObjectId(req.params.userId);
         const cart = await Cart.findOne({ user: userId }).populate("items.product");
         console.log(cart);
         if (!cart) {
