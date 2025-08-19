@@ -36,6 +36,7 @@ const getCart = async (req, res) => {
 const postCart = async (req, res) => {
     try {
         const { userId, items } = req.body;
+        console.log(items);
 
         if (!userId || !Array.isArray(items) || items.length === 0) {
             res.status(400).json({ message: "Invalid User ID or No Items in Cart" })
