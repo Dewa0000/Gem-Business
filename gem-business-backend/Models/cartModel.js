@@ -16,8 +16,9 @@ const cartItemSchema = new mongoose.Schema({
 
 const cartSchema = new mongoose.Schema({
     user: {
-        type: String,
-        required: true // set to true if cart only allowed for logged-in users
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required: true
     },
     items: [cartItemSchema],
     totalPrice: {
