@@ -7,13 +7,13 @@ const getCart = async (req, res) => {
         const userId = req.params.userId.toString();
         const cart = await Cart.findOne({ user: userId }).populate("items.product");
         console.log(cart);
-        // if (!cart) {
-        //     return res.json({ items: [] })
-        // }
+        if (!cart) {
+            return res.json({ items: [] })
+        }
 
         const enrichedItems = cart.items.map((item) => {
             const product = item.product;
-
+            console.log(product)
             if (!product) {
                 return null;
             }
