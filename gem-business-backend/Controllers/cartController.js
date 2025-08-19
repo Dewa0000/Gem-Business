@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const getCart = async (req, res) => {
     try {
         const userId = new mongoose.Types.ObjectId(req.params.userId);
-        const cart = await Cart.findOne({ user: userId }).populate("items.product");
+        const cart = await Cart.findOne({ user: userId }).populate("items.productId");
         console.log(cart);
         if (!cart) {
             return res.json({ items: [] })
