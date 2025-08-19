@@ -4,15 +4,15 @@ const mongoose = require("mongoose");
 
 const getCart = async (req, res) => {
     try {
-        const userId = new mongoose.Types.ObjectId(req.params.userId);
-        const cart = await Cart.findOne({ user: userId }).populate("items.productId");
+        const userId = req.params.userId.toString();
+        const cart = await Cart.findOne({ user: userId }).populate("items.product");
         console.log(cart);
         if (!cart) {
             return res.json({ items: [] })
         }
 
         const enrichedItems = cart.items.map((item) => {
-            const product = item.productId;
+            const product = item.product;
 
             if (!product) {
                 return null;
