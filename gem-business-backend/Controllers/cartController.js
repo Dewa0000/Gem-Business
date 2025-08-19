@@ -12,7 +12,7 @@ const getCart = async (req, res) => {
         }
 
         const enrichedItems = cart.items.map((item) => {
-            const product = item.product;
+            const product = item.productId;
 
             if (!product) {
                 return null;
@@ -22,7 +22,7 @@ const getCart = async (req, res) => {
                 _id: product._id,
                 name: product.name,
                 price: product.price,
-                qty: item.quantity
+                qty: item.qty
             };
 
         }).filter(Boolean);
