@@ -22,7 +22,6 @@ const getCart = async (req, res) => {
                 _id: product._id,
                 name: product.name,
                 price: product.price,
-                qty: item.qty
             };
 
         }).filter(Boolean);
