@@ -28,7 +28,7 @@ const CartReviewPage = () => {
               <div className="p-4">
                 <div className="grid gap-4">
                   {cart.map((item, index) => {
-                    return (<article key={index}>
+                    return (<article className="flex" key={index}>
                       <div  className="flex items-center text-white text-base font-medium gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2 justify-between">
                         {item.name}</div>
                       <div  className="flex items-center text-white text-base font-medium gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2 justify-between">
