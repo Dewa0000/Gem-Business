@@ -27,7 +27,7 @@ function ProductCard(){
                         {product.name}
                       </p>
                       <p className="text-[#96c5a8] text-sm font-normal">
-                        {product.price || "N/A"}
+                      ₹{product.price || "N/A"}
                       </p>
                     </div>
 
