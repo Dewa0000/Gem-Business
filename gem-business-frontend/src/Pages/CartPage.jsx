@@ -3,7 +3,7 @@ import { useCart } from "../Context/cartContext";
 
 const CartReviewPage = () => {
   const { cart, setCart } = useCart();
-  const total = cart.reduce((acc,item) => {return acc + item.price*item.quantity,0})
+  const total = cart.items.reduce((acc,item) => {return acc + item.price*item.quantity,0})
   return (
     <div
       className="relative flex size-full min-h-screen flex-col bg-[#122118] group/design-root overflow-x-hidden"
