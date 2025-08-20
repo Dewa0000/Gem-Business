@@ -29,17 +29,20 @@ const CartReviewPage = () => {
               Review Items
             </h1>
 
-            {/* Item 1 */}
+            {cart.length > 0 ? (
+              <div className="p-4">
+                <div className="grid gap-4">
+                  {cart.map((item,index) => {
+                     <div key = {index} className="flex items-center gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2 justify-between">{item.name}</div>
+                  })}
+                </div>
+              </div>
+            ) : (<div className="text-[#6a7881] text-sm font-normal leading-normal p-4">Your Cart is empty</div>)}
             <div className="flex items-center gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2 justify-between">
               <div className="flex items-center gap-4">
-                <div
-                  className="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14"
-                  style={{
-                    backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuAAEXGNma_DOPfTMstM_bEq7Sw_tXd4KsyIfAOrI_Z7BxrSUkxi2b1_pwqSCyLvw0pvowi8VwCEV14k95niBQrj0rEq0C8H36ellu-KKh9AqQHqTrdPiGlZuHDb-8xDAyCQtjP2CquHeLKthzxY0GeJ5J-B4bF3pYO2OMHf-2BAqERY_J47zel_4KkaPgIh01iuJnfjwHce3AU38RyttHwhOEtvf0HCcFURuQ_5VbqX0771E4h_VRbZ1NhTPLIwTMA37t6Ry97ygAQ")`,
-                  }}
-                ></div>
+                
                 <div className="flex flex-col justify-center">
-                  <p className="text-white text-base font-medium leading-normal line-clamp-1">Sapphire Pendant</p>
+                  <p className="text-white text-base font-medium leading-normal line-clamp-1">S</p>
                   <p className="text-[#96c5a8] text-sm font-normal leading-normal line-clamp-2">Quantity: 1</p>
                 </div>
               </div>
@@ -48,45 +51,7 @@ const CartReviewPage = () => {
               </div>
             </div>
 
-            {/* Item 2 */}
-            <div className="flex items-center gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2 justify-between">
-              <div className="flex items-center gap-4">
-                <div
-                  className="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14"
-                  style={{
-                    backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIzhPk-8q1DY07LRQ9SFj0TxjIwUB2xmmF-bKnnygc5zpEUdevGY2sdO_Kt38J-hdvKGWuO9wCzN1LN636HbluE0xUFFvq8BV43a1B0gRYWjGnsojCxqDed1K2Zd1on_qEol2A9tH6cHD-QowvWf1GSZQKCzt1ip9s_IN3_OdWZFV0oFtVDwdIS3dQiLO3WJEch240Qj5pE77aDEQmpz_cWcqqz6i_DdmBp4pyzxLftP5DL6H90aG3C_zeuv0w3btYG0DVYBYFjrY")`,
-                  }}
-                ></div>
-                <div className="flex flex-col justify-center">
-                  <p className="text-white text-base font-medium leading-normal line-clamp-1">Diamond Stud Earrings</p>
-                  <p className="text-[#96c5a8] text-sm font-normal leading-normal line-clamp-2">Quantity: 2</p>
-                </div>
-              </div>
-              <div className="shrink-0">
-                <p className="text-white text-base font-normal leading-normal">$400</p>
-              </div>
-            </div>
-
-            {/* Item 3 */}
-            <div className="flex items-center gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2 justify-between">
-              <div className="flex items-center gap-4">
-                <div
-                  className="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14"
-                  style={{
-                    backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIMMwPr4U4skTj_sT_CRAcV7_e4khNzswm9WpmPEBQN6MId8DgrFUX4stpqTTBkRB_BqHrOLXxOQAoqk8dIa4uZrJ2D-aA5G6soLRrIGDrtsMDlx0-4WUvuGoaYCrXDCrV-KpZpgEwBXua_U-308BRKcf0nJlMbIuQf-oRf6QoXV6We0bc89_NQVcDW8Oo4RDNrXTKqnB0jGZr5iwhhAquiyrPSe_CCUoMGH5hPhc_wZd7TKAErhyJEIxcHepQK9qvpbGWU4O-WdA")`,
-                  }}
-                ></div>
-                <div className="flex flex-col justify-center">
-                  <p className="text-white text-base font-medium leading-normal line-clamp-1">Ruby Ring</p>
-                  <p className="text-[#96c5a8] text-sm font-normal leading-normal line-clamp-2">Quantity: 1</p>
-                </div>
-              </div>
-              <div className="shrink-0">
-                <p className="text-white text-base font-normal leading-normal">$350</p>
-              </div>
-            </div>
-
-            {/* Order Summary */}
+                        {/* Order Summary */}
             <h3 className="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
               Order Summary
             </h3>
