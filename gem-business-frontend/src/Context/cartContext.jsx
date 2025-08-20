@@ -42,10 +42,10 @@ export const CartProvider = ({ children }) => {
 
        if(exists){
         updatedCart = cart.map((item) => {
-            return (item._id === product._id ? {...item, qty: item.qty + 1} : item)
+            return (item._id === product._id ? {...item, quantity: item.quantity + 1} : item)
         })
        }else{
-        updatedCart = [...cart,{...product,qty: 1}]
+        updatedCart = [...cart,{...product,quantity: 1}]
        }
        setCart(updatedCart)
        syncCartWithBackend(updatedCart);
@@ -54,8 +54,8 @@ export const CartProvider = ({ children }) => {
     const syncCartWithBackend = async (updatedCart) => {
           try{
             const cleanedCart = updatedCart.map(item => ({
-                 productId : item._id,
-                 qty : item.qty
+                 product : item._id,
+                 quantity : item.quantity
             }))
             const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://gem-business.onrender.com";
 
