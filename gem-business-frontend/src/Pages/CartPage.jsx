@@ -1,5 +1,6 @@
 import React from "react";
 import { useCart } from "../Context/cartContext";
+import { Link } from "react-router-dom";
 
 const CartReviewPage = () => {
   const { cart, removeFromCart } = useCart();
@@ -60,7 +61,7 @@ const CartReviewPage = () => {
               </div>
               <div className="flex justify-between gap-x-6 py-2">
                 <p className="text-[#96c5a8] text-sm font-normal leading-normal">Total</p>
-                <p className="text-white text-sm font-normal leading-normal text-right">$1050</p>
+                <p className="text-white text-sm font-normal leading-normal text-right">₹{total + 50} </p>
               </div>
             </div>
 
@@ -75,7 +76,7 @@ const CartReviewPage = () => {
                 <button
                   className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-2.5 bg-[#1b3124] text-white text-sm font-bold leading-normal tracking-[0.015em]"
                 >
-                  <span className="truncate">Proceed to Checkout</span>
+                  <Link className="truncate" to="/checkout">Proceed to Checkout</Link>
                 </button>
               </div>
             </div>
