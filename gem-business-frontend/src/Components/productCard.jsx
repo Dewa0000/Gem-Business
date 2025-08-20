@@ -4,7 +4,7 @@ import { useCart } from "../Context/cartContext";
 
 function ProductCard(){
     const {products,error} = FetchProducts();
-    const {cart, setCart} = useCart();
+    const {addtoCart} = useCart();
     return (
         <>
         {Array.isArray(products) &&
