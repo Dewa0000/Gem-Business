@@ -60,7 +60,7 @@ export const CartProvider = ({ children }) => {
         if(exists.quantity === 1){
             updatedCart = cart.filter((item) => item._id !== product._id);
         }else{
-            updatedCart = cart.map((item) => item._id === product._id ? {...item,quantity: item.quantity} : item)
+            updatedCart = cart.map((item) => item._id === product._id ? {...item,quantity: item.quantity - 1} : item)
         }
         setCart(updatedCart);
         syncCartWithBackend(updatedCart);
