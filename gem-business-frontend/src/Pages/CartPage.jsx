@@ -30,9 +30,9 @@ const CartReviewPage = () => {
                   {cart.map((item, index) => {
                     return (<article key={index}>
                       <div  className="flex items-center text-white text-base font-medium gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2 justify-between">
-                        {item.name} (x{item.quantity})</div>
+                        {item.name}</div>
                       <div  className="flex items-center text-white text-base font-medium gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2 justify-between">
-                        {item.price} (x{item.quantity})</div>
+                        {item.price} x {item.quantity}</div>
                         <button onClick={() => removeFromCart()} className="text-red-500 text-sm font-medium hover:text-red-700">Remove</button>
                     </article>)
                   })}
