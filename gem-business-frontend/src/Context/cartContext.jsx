@@ -51,6 +51,21 @@ export const CartProvider = ({ children }) => {
        syncCartWithBackend(updatedCart);
     }
 
+    const removeFromCart = (item) => {
+        let updatedCart;
+
+        const exists = cart.find((item) => item._id === product._id);
+        if (!exists) return
+
+        if(exists.quantity === 1){
+            updatedCart = cart.filter((item) => item._id !== product._id);
+        }else{
+            updatedCart = cart.map((item) => item._id === product._id ? {...item,quantity: item.quantity} : item)
+        }
+        setCart(updatedCart);
+        syncCartWithBackend(updatedCart);
+    }
+
     const syncCartWithBackend = async (updatedCart) => {
           try{
             const cleanedCart = updatedCart.map(item => ({
@@ -78,7 +93,7 @@ export const CartProvider = ({ children }) => {
     }
 
     return (
-        <CartContext.Provider value={{ cart, addtoCart }}>
+        <CartContext.Provider value={{ cart, addtoCart, removeFromCart }}>
             {children}
         </CartContext.Provider>
     )

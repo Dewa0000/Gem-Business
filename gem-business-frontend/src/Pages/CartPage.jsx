@@ -33,7 +33,7 @@ const CartReviewPage = () => {
                         {item.name}</div>
                       <div  className="flex items-center text-white text-base font-medium gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2 justify-between">
                       ₹{item.price} x {item.quantity}</div>
-                        <button onClick={() => removeFromCart()} className="text-red-500 text-sm font-medium hover:text-red-700">Remove</button>
+                        <button onClick={() => removeFromCart(item)} className="text-red-500 text-sm font-medium hover:text-red-700">Remove</button>
                     </article>)
                   })}
                 </div>
