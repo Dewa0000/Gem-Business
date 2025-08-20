@@ -51,7 +51,7 @@ export const CartProvider = ({ children }) => {
        syncCartWithBackend(updatedCart);
     }
 
-    const removeFromCart = (item) => {
+    const removeFromCart = (product) => {
         let updatedCart;
 
         const exists = cart.find((item) => item._id === product._id);
