@@ -33,7 +33,7 @@ const CartReviewPage = () => {
               <div className="p-4">
                 <div className="grid gap-4">
                   {cart.map((item,index) => {
-                     <div key = {index} className="flex items-center gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2 justify-between">{item.name}</div>
+                     return (<div key = {index} className="flex items-center gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2 justify-between">{item.name}</div>)
                   })}
                 </div>
               </div>
