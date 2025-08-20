@@ -25,7 +25,7 @@ export const CartProvider = ({ children }) => {
                 const res = await fetch(`${backendUrl}/cart/${user._id}`);
                 const data = await res.json();
                 setCart(Array.isArray(data.items) ? data.items : []);
-                console.log(data.items);
+                
             }
             console.log(user._id);
             

@@ -11,7 +11,7 @@ const CartReviewPage = () => {
     >
         {Array.isArray(cart.items) && cart.items.map((item,index) => {
             return (
-                <div key={index}>{item.name}</div>
+                <div ><span key={index}>{item.name}</span></div>
             )
         })}
       <div className="layout-container flex h-full grow flex-col">
