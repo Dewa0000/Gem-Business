@@ -2,18 +2,18 @@ import React from "react";
 import { useCart } from "../Context/cartContext";
 
 const CartReviewPage = () => {
-    const {cart, setCart} = useCart();
-    console.log(cart);
+  const { cart, setCart } = useCart();
+  console.log(cart);
   return (
     <div
       className="relative flex size-full min-h-screen flex-col bg-[#122118] group/design-root overflow-x-hidden"
       style={{ fontFamily: '"Plus Jakarta Sans", "Noto Sans", sans-serif' }}
     >
-        {Array.isArray(cart) && cart.map((item,index) => {
-            return (
-                <div ><span key={index}>{item.name}</span></div>
-            )
-        })}
+      {Array.isArray(cart) && cart.map((item, index) => {
+        return (
+          <div ><span key={index}>{item.name}</span></div>
+        )
+      })}
       <div className="layout-container flex h-full grow flex-col">
         <div className="px-40 flex flex-1 justify-center py-5">
           <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
@@ -32,15 +32,18 @@ const CartReviewPage = () => {
             {cart.length > 0 ? (
               <div className="p-4">
                 <div className="grid gap-4">
-                  {cart.map((item,index) => {
-                     return (<div key = {index} className="flex items-center gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2 justify-between">{item.name}</div>)
+                  {cart.map((item, index) => {
+                    return (<article key={index}>
+                      <div  className="flex items-center gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2 justify-between">{item.name} (x{item.quantity})</div>
+                      <div  className="flex items-center gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2 justify-between">{item.price} (x{item.quantity})</div>
+                    </article>)
                   })}
                 </div>
               </div>
             ) : (<div className="text-[#6a7881] text-sm font-normal leading-normal p-4">Your Cart is empty</div>)}
             <div className="flex items-center gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2 justify-between">
               <div className="flex items-center gap-4">
-                
+
                 <div className="flex flex-col justify-center">
                   <p className="text-white text-base font-medium leading-normal line-clamp-1">S</p>
                   <p className="text-[#96c5a8] text-sm font-normal leading-normal line-clamp-2">Quantity: 1</p>
@@ -51,7 +54,7 @@ const CartReviewPage = () => {
               </div>
             </div>
 
-                        {/* Order Summary */}
+            {/* Order Summary */}
             <h3 className="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
               Order Summary
             </h3>
