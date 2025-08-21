@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../Context/cartContext";
 
 const CheckoutPage = () => {
-  const [cart, setCart] = useCart(); // Assuming useCart returns [cart, setCart]
+  const {cart, setCart} = useCart(); // Assuming useCart returns [cart, setCart]
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
@@ -42,7 +42,7 @@ const CheckoutPage = () => {
       return;
     }
 
-    const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://water-can-backend.onrender.com";
+    const backendUrl = import.meta.env.VITE_BACKEND_URL ;
     try {
       const res = await fetch(`${backendUrl}/checkout`, {
         method: "POST",
