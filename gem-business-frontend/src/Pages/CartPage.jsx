@@ -2,6 +2,7 @@ import React from "react";
 import { useCart } from "../Context/cartContext";
 import { Link } from "react-router-dom";
 
+
 const CartReviewPage = () => {
   const { cart, removeFromCart } = useCart();
   const total = cart.reduce((acc,item) => {return acc + item.price*item.quantity},0)
