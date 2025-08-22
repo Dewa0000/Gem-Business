@@ -29,20 +29,22 @@ const CheckoutPage = () => {
 
   const handlePlaceOrder = async (e) => {
     e.preventDefault();
+  
     const requiredFields = ["fullName", "phoneNumber", "address", "city", "postalCode", "country"];
     if (requiredFields.some((field) => !form[field])) {
       alert("Please fill all required fields");
       return;
     }
-
+  
     const token = localStorage.getItem("token");
     if (!token) {
       alert("You're not logged in. Please login to place order.");
       navigate("/login");
       return;
     }
-
+  
     const backendUrl = import.meta.env.VITE_BACKEND_URL;
+  
     try {
       const res = await fetch(`${backendUrl}/checkout`, {
         method: "POST",
@@ -51,25 +53,40 @@ const CheckoutPage = () => {
           Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({
-          ...form,
-          items: cart,
-          total,
+          orderItems: cart.map((item) => ({
+            name: item.name,
+            quantity: item.quantity,
+            image: item.image,
+            price: item.price,
+            product: item._id, // <-- product ObjectId
+          })),
+          shippingAddress: {
+            address: form.address,
+            city: form.city,
+            postalCode: form.postalCode,
+            country: form.country,
+          },
+          paymentMethod: form.paymentMethod,
+          totalPrice: total,
         }),
       });
+  
       const data = await res.json();
+  
       if (res.ok) {
-        console.log("Ordered products:", data);
-        setCart([]);
+        console.log("Order placed successfully:", data);
+        setCart([]); // clear cart
         navigate("/thank-you");
       } else {
-        console.log("Error Message:", data.message);
-        alert(data.message || "Something went wrong");
+        console.error("Error placing order:", data.error || data.message);
+        alert(data.error || data.message || "Something went wrong");
       }
     } catch (err) {
-      console.log(err.message);
+      console.error("Network error:", err.message);
       alert("Network error or server issue");
     }
   };
+  
 
   return (
     <div
