@@ -286,10 +286,10 @@ const CheckoutPage = () => {
               <h3 className="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
                 Order Summary
               </h3>
-              <div className="flex items-center justify-center gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2">
+              <div className=" gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2">
                 {cart && cart.map((item,index) => {
-                   return (<div key={index}
-                   className="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14"
+                   return (<div  key={index}
+                   className=" flex items-center justify-center bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14"
                  >
                   <div className="flex flex-col justify-center">
                    <p className="text-white text-base font-medium leading-normal line-clamp-1">{item.name}</p>
