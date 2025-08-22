@@ -127,6 +127,35 @@ const CheckoutPage = () => {
               </div>
               <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
                 <label className="flex flex-col min-w-40 flex-1">
+                  <p className="text-white text-base font-medium leading-normal pb-2">Email</p>
+                  <input
+                    placeholder="Enter your address"
+                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#1b3124] focus:border-none h-14 placeholder:text-[#96c5a8] p-4 text-base font-normal leading-normal"
+                    type="text"
+                    name="address"
+                    value={form.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </label>
+              </div>
+              <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label className="flex flex-col min-w-40 flex-1">
+                  <p className="text-white text-base font-medium leading-normal pb-2">Phone Number</p>
+                  <input
+                    placeholder="Enter your phone number"
+                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#1b3124] focus:border-none h-14 placeholder:text-[#96c5a8] p-4 text-base font-normal leading-normal"
+                    type="tel"
+                    name="phoneNumber"
+                    value={form.phoneNumber}
+                    onChange={handleChange}
+                    required
+                  />
+                </label>
+              </div>
+
+              <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label className="flex flex-col min-w-40 flex-1">
                   <p className="text-white text-base font-medium leading-normal pb-2">Address</p>
                   <input
                     placeholder="Enter your address"
@@ -182,21 +211,7 @@ const CheckoutPage = () => {
                   </select>
                 </label>
               </div>
-              <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label className="flex flex-col min-w-40 flex-1">
-                  <p className="text-white text-base font-medium leading-normal pb-2">Phone Number</p>
-                  <input
-                    placeholder="Enter your phone number"
-                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#1b3124] focus:border-none h-14 placeholder:text-[#96c5a8] p-4 text-base font-normal leading-normal"
-                    type="tel"
-                    name="phoneNumber"
-                    value={form.phoneNumber}
-                    onChange={handleChange}
-                    required
-                  />
-                </label>
-              </div>
-
+              
               {/* Shipping Method */}
               <h3 className="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
                 Shipping Method
