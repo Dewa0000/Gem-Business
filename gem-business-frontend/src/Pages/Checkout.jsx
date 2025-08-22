@@ -265,58 +265,8 @@ const CheckoutPage = () => {
                 </label>
               </div>
 
-              {/* Payment Details */}
-              <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label className="flex flex-col min-w-40 flex-1">
-                  <p className="text-white text-base font-medium leading-normal pb-2">Card Number</p>
-                  <input
-                    placeholder="Enter your card number"
-                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#1b3124] focus:border-none h-14 placeholder:text-[#96c5a8] p-4 text-base font-normal leading-normal"
-                    type="text"
-                    name="cardNumber"
-                    value={form.cardNumber || ""}
-                    onChange={handleChange}
-                  />
-                </label>
-              </div>
-              <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label className="flex flex-col min-w-40 flex-1">
-                  <p className="text-white text-base font-medium leading-normal pb-2">Expiry Date</p>
-                  <input
-                    placeholder="MM/YY"
-                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#1b3124] focus:border-none h-14 placeholder:text-[#96c5a8] p-4 text-base font-normal leading-normal"
-                    type="text"
-                    name="expiryDate"
-                    value={form.expiryDate || ""}
-                    onChange={handleChange}
-                  />
-                </label>
-                <label className="flex flex-col min-w-40 flex-1">
-                  <p className="text-white text-base font-medium leading-normal pb-2">CVV</p>
-                  <input
-                    placeholder="Enter CVV"
-                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#1b3124] focus:border-none h-14 placeholder:text-[#96c5a8] p-4 text-base font-normal leading-normal"
-                    type="text"
-                    name="cvv"
-                    value={form.cvv || ""}
-                    onChange={handleChange}
-                  />
-                </label>
-              </div>
-              <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label className="flex flex-col min-w-40 flex-1">
-                  <p className="text-white text-base font-medium leading-normal pb-2">Cardholder Name</p>
-                  <input
-                    placeholder="Enter cardholder name"
-                    className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#1b3124] focus:border-none h-14 placeholder:text-[#96c5a8] p-4 text-base font-normal leading-normal"
-                    type="text"
-                    name="cardholderName"
-                    value={form.cardholderName || ""}
-                    onChange={handleChange}
-                  />
-                </label>
-              </div>
-
+            
+              
               {/* Order Summary */}
               <h3 className="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
                 Order Summary
