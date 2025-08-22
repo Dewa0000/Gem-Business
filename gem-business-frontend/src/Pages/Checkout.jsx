@@ -146,10 +146,10 @@ const CheckoutPage = () => {
                 <label className="flex flex-col min-w-40 flex-1">
                   <p className="text-white text-base font-medium leading-normal pb-2">Email</p>
                   <input
-                    placeholder="Enter your address"
+                    placeholder="Enter your email"
                     className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#1b3124] focus:border-none h-14 placeholder:text-[#96c5a8] p-4 text-base font-normal leading-normal"
                     type="text"
-                    name="address"
+                    name="email"
                     value={form.email}
                     onChange={handleChange}
                     required
