@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../Context/cartContext";
 
 const CheckoutPage = () => {
-  const {cart, setCart} = useCart();
+  const { cart, setCart } = useCart();
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
@@ -42,7 +42,7 @@ const CheckoutPage = () => {
       return;
     }
 
-    const backendUrl = import.meta.env.VITE_BACKEND_URL ;
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
     try {
       const res = await fetch(`${backendUrl}/checkout`, {
         method: "POST",
@@ -211,7 +211,7 @@ const CheckoutPage = () => {
                   </select>
                 </label>
               </div>
-              
+
               {/* Shipping Method */}
               <h3 className="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
                 Shipping Method
@@ -280,24 +280,38 @@ const CheckoutPage = () => {
                 </label>
               </div>
 
-            
-              
+
+
               {/* Order Summary */}
               <h3 className="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
                 Order Summary
               </h3>
-              <div className=" gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2">
-                {cart && cart.map((item,index) => {
-                   return (<div  key={index}
-                   className=" flex items-center justify-center bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14"
-                 >
-                  <div className="flex flex-col justify-center">
-                   <p className="text-white text-base font-medium leading-normal line-clamp-1">{item.name}</p>
-                   <p className="text-[#96c5a8] text-sm font-normal leading-normal line-clamp-2">₹{item.price} x {item.quantity}</p>
-                 </div>
-                 </div>)
-                 
-                })}
+              <div className="gap-4 bg-[#1b3124] px-4 py-3">
+                {cart && cart.length > 0 ? (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {cart.map((item, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center gap-4 p-3 bg-[#1a2b22] rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-[#2a3b32]"
+                      >
+                        {item.image && (
+                          <div
+                            className="w-16 h-16 bg-cover bg-center rounded-md"
+                            style={{ backgroundImage: `url(${item.image})` }}
+                          />
+                        )}
+                        <div className="flex-1">
+                          <p className="text-white text-base font-medium leading-tight line-clamp-1">{item.name}</p>
+                          <p className="text-[#96c5a8] text-sm font-normal leading-snug">
+                            ₹{item.price.toLocaleString()} x {item.quantity} = ₹{(item.price * item.quantity).toLocaleString()}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-[#96c5a8] text-sm font-normal text-center py-4">Your cart is empty</p>
+                )}
               </div>
               <div className="p-4 bg-[#1b3124]">
                 <div className="flex justify-between gap-x-6 py-2">
