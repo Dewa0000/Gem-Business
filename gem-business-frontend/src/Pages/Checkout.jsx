@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../Context/cartContext";
 
 const CheckoutPage = () => {
-  const {cart, setCart} = useCart(); // Assuming useCart returns [cart, setCart]
+  const {cart, setCart} = useCart();
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
@@ -287,21 +287,22 @@ const CheckoutPage = () => {
                 Order Summary
               </h3>
               <div className="flex items-center gap-4 bg-[#1b3124] px-4 min-h-[72px] py-2">
-                <div
-                  className="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14"
-                  style={{
-                    backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuDg3yBTXSPEPGtTAlaYCl9QCojYWt0R3VqNCiRBxGr4z-NmgWsYcs_SuBjVTmxvmUlaELc0vX1QC-QaPJqiASDUB5H6glCd-yuhKmn4GarOjnkoO8jmqfyLnlmNE56EDIRtPtZcK3V3_nFcLQH8LPH3S9afhamMNyam3NBLgMdf_T0PHbBYkIJzagZguD3BlMz4_zixYErBWo7Lv8r0Nce0dSzZ7opL-AgoPibentdGYP838EvCya-2LZpDpFOpdMBlMyNUKAFH5EY")`,
-                  }}
-                ></div>
-                <div className="flex flex-col justify-center">
-                  <p className="text-white text-base font-medium leading-normal line-clamp-1">Gemstone Ring</p>
-                  <p className="text-[#96c5a8] text-sm font-normal leading-normal line-clamp-2">1 item</p>
-                </div>
+                {cart && cart.map((item,index) => {
+                   <div key={index}
+                   className="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14"
+                 >
+                  <div className="flex flex-col justify-center">
+                   <p className="text-white text-base font-medium leading-normal line-clamp-1">{item.name}</p>
+                   <p className="text-[#96c5a8] text-sm font-normal leading-normal line-clamp-2">₹{item.price} x {item.quantity}</p>
+                 </div>
+                 </div>
+                 
+                })}
               </div>
               <div className="p-4 bg-[#1b3124]">
                 <div className="flex justify-between gap-x-6 py-2">
                   <p className="text-[#96c5a8] text-sm font-normal leading-normal">Subtotal</p>
-                  <p className="text-white text-sm font-normal leading-normal text-right">${total.toFixed(2)}</p>
+                  <p className="text-white text-sm font-normal leading-normal text-right">₹{total.toFixed(2)}</p>
                 </div>
                 <div className="flex justify-between gap-x-6 py-2">
                   <p className="text-[#96c5a8] text-sm font-normal leading-normal">Shipping</p>
@@ -309,7 +310,7 @@ const CheckoutPage = () => {
                 </div>
                 <div className="flex justify-between gap-x-6 py-2">
                   <p className="text-[#96c5a8] text-sm font-normal leading-normal">Total</p>
-                  <p className="text-white text-sm font-normal leading-normal text-right">${total.toFixed(2)}</p>
+                  <p className="text-white text-sm font-normal leading-normal text-right">₹{total.toFixed(2)}</p>
                 </div>
               </div>
 
