@@ -1,26 +1,26 @@
 const express = require("express");
 const router = express.Router();
-const Order = require("../Models/orderModel");
 const authMiddleware = require("../Middlewares/requireAuth");
+const Checkout = require("../Models/checkoutModel");
 
 
 router.post("/", authMiddleware, async (req,res) => {
-    const {orderItems,shippingAddress,paymentMethod,totalPrice} = req.body;
+    const {orderItems,shippingMethod,paymentMethod,totalPrice} = req.body;
 
     if(!orderItems || orderItems.length === 0){
         res.status(401).json({err:"No order found"})
     }
 
     try{
-        const newOrder = new Order({
+        const newCheckout = new Checkout({
             user: req.userId,
             orderItems,
-            shippingAddress,
+            shippingMethod,
             paymentMethod,
             totalPrice
         })
 
-        const savedOrder = await newOrder.save();
+        const savedOrder = await newCheckout.save();
         res.status(201).json(savedOrder);
     }catch(err){
         res.status(500).json({error: err.message})
