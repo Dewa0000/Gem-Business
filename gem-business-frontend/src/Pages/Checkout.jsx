@@ -13,7 +13,7 @@ const CheckoutPage = () => {
     city: "",
     postalCode: "",
     country: "",
-    phoneNumber: "",
+    number: "",
     shippingMethod: "",
     paymentMethod: "",
   });
@@ -31,7 +31,7 @@ const CheckoutPage = () => {
   const handlePlaceOrder = async (e) => {
     e.preventDefault();
   
-    const requiredFields = ["fullName", "phoneNumber", "email", "address", "city", "postalCode", "country"];
+    const requiredFields = ["fullName", "number", "email", "address", "city", "postalCode", "country"];
     if (requiredFields.some((field) => !form[field])) {
       alert("Please fill all required fields");
       return;
@@ -57,13 +57,13 @@ const CheckoutPage = () => {
           orderItems: cart.map((item) => ({
             name: item.name,
             quantity: item.quantity,
-            image: item.image || "",
+            image: item.image,
             price: item.price,
             product: item._id, // <-- product ObjectId
           })),
           fullName: form.fullName,
           email: form.email,
-          number: form.phoneNumber,
+          number: form.number,
           address: form.address,
           city: form.city,
           pincode: form.postalCode, // Map postalCode to pincode
@@ -166,8 +166,8 @@ const CheckoutPage = () => {
                     placeholder="Enter your phone number"
                     className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#1b3124] focus:border-none h-14 placeholder:text-[#96c5a8] p-4 text-base font-normal leading-normal"
                     type="tel"
-                    name="phoneNumber"
-                    value={form.phoneNumber}
+                    name="number"
+                    value={form.number}
                     onChange={handleChange}
                     required
                   />
