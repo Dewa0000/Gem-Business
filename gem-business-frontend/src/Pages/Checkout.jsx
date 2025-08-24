@@ -314,12 +314,7 @@ const CheckoutPage = () => {
                         key={index}
                         className="flex items-center gap-4 p-3 bg-[#1a2b22] rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-[#2a3b32]"
                       >
-                        {item.image && (
-                          <div
-                            className="w-16 h-16 bg-cover bg-center rounded-md"
-                            style={{ backgroundImage: `url(${item.image})` }}
-                          />
-                        )}
+                        
                         <div className="flex-1">
                           <p className="text-white text-base font-medium leading-tight line-clamp-1">{item.name}</p>
                           <p className="text-[#96c5a8] text-sm font-normal leading-snug">
