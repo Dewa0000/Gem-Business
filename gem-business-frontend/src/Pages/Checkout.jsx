@@ -8,6 +8,7 @@ const CheckoutPage = () => {
 
   const [form, setForm] = useState({
     fullName: "",
+    email: "",
     address: "",
     city: "",
     postalCode: "",
@@ -30,7 +31,7 @@ const CheckoutPage = () => {
   const handlePlaceOrder = async (e) => {
     e.preventDefault();
   
-    const requiredFields = ["fullName", "phoneNumber", "address", "city", "postalCode", "country"];
+    const requiredFields = ["fullName", "phoneNumber", "email", "address", "city", "postalCode", "country"];
     if (requiredFields.some((field) => !form[field])) {
       alert("Please fill all required fields");
       return;
@@ -56,16 +57,18 @@ const CheckoutPage = () => {
           orderItems: cart.map((item) => ({
             name: item.name,
             quantity: item.quantity,
-            image: item.image,
+            image: item.image || "",
             price: item.price,
             product: item._id, // <-- product ObjectId
           })),
-          shippingAddress: {
-            address: form.address,
-            city: form.city,
-            postalCode: form.postalCode,
-            country: form.country,
-          },
+          fullName: form.fullName,
+          email: form.email,
+          number: form.phoneNumber,
+          address: form.address,
+          city: form.city,
+          pincode: form.postalCode, // Map postalCode to pincode
+          country: form.country,
+          shippingMethod: form.shippingMethod,
           paymentMethod: form.paymentMethod,
           totalPrice: total,
         }),
