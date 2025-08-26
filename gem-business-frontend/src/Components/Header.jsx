@@ -1,6 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import {FaShoppingCart, FaUser, FaBars} from "react-icons/fa"
+import { useCart } from "../Context/cartContext";
+import { useState } from "react";
 
 const Header = () => {
+  const {cart} = useCart();
+  const navigate = useNavigate();
+  const [isOpen,setIsOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+
+  const totalItems = cart.reduce((acc,item) => {return acc + item.quantity}, 0);
+  const token = localStorage.getItem("token");
   return (
     <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#366347] px-10 py-3 bg-[#122118] text-white border-2 border-red-500"> {/* Added border for visibility */}
       <div className="flex items-center gap-4">
@@ -15,27 +25,20 @@ const Header = () => {
       </div>
 
       <div className="flex flex-1 justify-end gap-8">
-        <div className="flex items-center gap-9">
-          <Link className="text-sm font-medium leading-normal" to="/">
-            Home
-          </Link>
-          <Link className="text-sm font-medium leading-normal" to="/products">
-            Gemstones
-          </Link>
-          <Link className="text-sm font-medium leading-normal" to="/about-us">
-            About Us
-          </Link>
-          <Link className="text-sm font-medium leading-normal" to="/products">
-            Shop
-          </Link>
-          <Link className="text-sm font-medium leading-normal" to="/gem-recommendation">
-            Gem Recommendation
-          </Link>
-          <Link className="text-sm font-medium leading-normal" to="/contact-us">
-            Contact Us
-          </Link>
-        </div>
-
+        {
+          ["Home","Gemstones","About Us","Shop","Gem Recommendation","Contact Us"].map((item) => {
+            return (
+              <>
+              <NavLink 
+              key={item}
+              to={`/${item.toLowerCase()}`}
+              className={({isActive}) => `text-sm font-medium leading-normal ${isActive ? "text-blue-600 underline" : ""}`}>
+               {item}
+              </NavLink>
+              </>
+            )
+          })
+        }
         <div className="flex gap-2">
           {/* Search Button */}
           <button className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#1b3124] text-white">
