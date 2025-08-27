@@ -12,6 +12,7 @@ import CartReviewPage from './Pages/CartPage'
 import { CartProvider } from "./Context/cartContext"
 import CheckoutPage from './Pages/Checkout'
 import ThankYouPage from './Pages/Thankyou'
+import MyAccount from './Pages/myAccount'
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
             <Route path='/cart' element={<CartReviewPage />}></Route>
             <Route path='/checkout' element={<CheckoutPage />}></Route>
             <Route path='/thank-you' element={<ThankYouPage />}></Route>
+            <Route path='/my-account' element={<MyAccount/>}></Route>
           </Routes>
           <Footer />
         </Router>
