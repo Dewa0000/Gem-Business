@@ -32,7 +32,8 @@ const Header = () => {
                 key={item}
                 to={`/${item.toLowerCase()}`}
                 className={({ isActive }) =>
-                  `text-sm font-medium leading-normal text-white hover:text-[#96c5a8] ${isActive ? "text-[#96c5a8] underline" : ""
+                  `text-sm font-medium leading-normal text-white hover:text-[#96c5a8] ${
+                    isActive ? "text-[#96c5a8] underline" : ""
                   }`
                 }
               >
@@ -57,45 +58,114 @@ const Header = () => {
           </button>
 
           {/* Sign In Link */}
-          {!token && <NavLink to="/login" className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#1b3124] text-white gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-              <path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"></path>
-            </svg>
-            <span className="truncate">Sign In</span>
-          </NavLink>}
+          {!token && (
+            <NavLink
+              to="/login"
+              className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#1b3124] text-white gap-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20px"
+                height="20px"
+                fill="currentColor"
+                viewBox="0 0 256 256"
+              >
+                <path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"></path>
+              </svg>
+              <span className="truncate">Sign In</span>
+            </NavLink>
+          )}
 
-          {/*Mobile Menu */}
+          {/* Mobile Menu Toggle */}
           <div className="md:hidden">
-            <button 
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-[#121516] p-2"
-            aria-label="Toggle navigation menu">
-          <FaBars size={24}></FaBars>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-white p-2"
+              aria-label="Toggle navigation menu"
+            >
+              <FaBars size={24} />
             </button>
           </div>
 
+          {/* Mobile Menu */}
           {isOpen && (
-            <div className="absolute top-[60px] left-0 right-0 bg-white border-b border-[#f1f3f4] shadow-md md:hidden z-10">
+            <div className="absolute top-[60px] left-0 right-0 bg-[#122118] border-b border-[#366347] shadow-md md:hidden z-10">
               <div className="flex flex-col items-center gap-4 py-4">
-                {
-                  ["Home", "Gemstones", "About Us", "Shop", "Gem Recommendation", "Contact Us"].map((item) => {
-                    return (
-                      <NavLink
-                        key={item}
-                        to={`/${item.toLowerCase()}`}
-                        className={({ isActive }) =>
-                          `text-sm font-medium leading-normal text-white hover:text-[#96c5a8] ${isActive ? "text-[#96c5a8] underline" : ""
-                          }`
-                        }
-                      >
-                        {item}
-                      </NavLink>
-                    );
-                  })
-                }
+                {["Home", "Gemstones", "About Us", "Shop", "Gem Recommendation", "Contact Us"].map((item) => (
+                  <NavLink
+                    key={item}
+                    to={`/${item.toLowerCase()}`}
+                    className={({ isActive }) =>
+                      `text-sm font-medium leading-normal text-white hover:text-[#96c5a8] ${
+                        isActive ? "text-[#96c5a8] underline" : ""
+                      }`
+                    }
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item}
+                  </NavLink>
+                ))}
               </div>
             </div>
           )}
+
+          {/* Cart and My Account Buttons (Desktop) */}
+          <div className="hidden md:flex items-center gap-2">
+            <NavLink
+              to="/cart"
+              className="relative flex items-center justify-center w-10 h-10 rounded-lg bg-[#1b3124] text-white hover:bg-[#2a3b32] transition"
+              aria-label={`View cart with ${totalItems} items`}
+            >
+              <FaShoppingCart size={20} />
+              {totalItems > 0 && (
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                  {totalItems}
+                </span>
+              )}
+            </NavLink>
+            {token && (
+              <NavLink
+                to="/my-account"
+                className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#1b3124] text-white hover:bg-[#2a3b32] transition"
+                aria-label="Go to my account"
+              >
+                <FaUser size={20} />
+              </NavLink>
+            )}
+          </div>
+
+          {/* Cart and My Account Dropdown (Mobile) */}
+          <div className="relative md:hidden">
+            <button
+              onClick={() => setIsProfileOpen(!isProfileOpen)}
+              className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#1b3124] text-white hover:bg-[#2a3b32] transition"
+              aria-label="Toggle cart and account menu"
+            >
+              <FaUser size={20} />
+            </button>
+            {isProfileOpen && (
+              <div className="absolute top-full right-0 mt-2 bg-[#122118] border border-[#366347] shadow-md rounded-md z-10">
+                <NavLink
+                  to="/cart"
+                  className="flex items-center gap-2 px-4 py-2 text-white text-sm font-medium hover:bg-[#1b3124]"
+                  onClick={() => setIsProfileOpen(false)}
+                >
+                  <FaShoppingCart size={16} />
+                  <span>Cart ({totalItems})</span>
+                </NavLink>
+                {token && (
+                  <NavLink
+                    to="/my-account"
+                    className="flex items-center gap-2 px-4 py-2 text-white text-sm font-medium hover:bg-[#1b3124]"
+                    onClick={() => setIsProfileOpen(false)}
+                  >
+                    <FaUser size={16} />
+                    <span>My Account</span>
+                  </NavLink>
+                )}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </header>
