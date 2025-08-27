@@ -22,7 +22,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#366347] px-10 py-3 bg-[#122118] text-white border-2 border-red-500">
+    <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#366347] px-10 py-3 bg-[#122118] text-white">
       <div className="flex items-center gap-4">
         <div className="w-4 h-4">
           <svg viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
