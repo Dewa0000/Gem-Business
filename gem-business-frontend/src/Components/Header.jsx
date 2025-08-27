@@ -32,8 +32,7 @@ const Header = () => {
                 key={item}
                 to={`/${item.toLowerCase()}`}
                 className={({ isActive }) =>
-                  `text-sm font-medium leading-normal text-white hover:text-[#96c5a8] ${
-                    isActive ? "text-[#96c5a8] underline" : ""
+                  `text-sm font-medium leading-normal text-white hover:text-[#96c5a8] ${isActive ? "text-[#96c5a8] underline" : ""
                   }`
                 }
               >
@@ -64,6 +63,39 @@ const Header = () => {
             </svg>
             <span className="truncate">Sign In</span>
           </NavLink>}
+
+          {/*Mobile Menu */}
+          <div className="md:hidden">
+            <button 
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-[#121516] p-2"
+            aria-label="Toggle navigation menu">
+          <FaBars size={24}></FaBars>
+            </button>
+          </div>
+
+          {isOpen && (
+            <div className="absolute top-[60px] left-0 right-0 bg-white border-b border-[#f1f3f4] shadow-md md:hidden z-10">
+              <div className="flex flex-col items-center gap-4 py-4">
+                {
+                  ["Home", "Gemstones", "About Us", "Shop", "Gem Recommendation", "Contact Us"].map((item) => {
+                    return (
+                      <NavLink
+                        key={item}
+                        to={`/${item.toLowerCase()}`}
+                        className={({ isActive }) =>
+                          `text-sm font-medium leading-normal text-white hover:text-[#96c5a8] ${isActive ? "text-[#96c5a8] underline" : ""
+                          }`
+                        }
+                      >
+                        {item}
+                      </NavLink>
+                    );
+                  })
+                }
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </header>
