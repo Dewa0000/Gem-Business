@@ -97,39 +97,6 @@ function MyAccount() {
               </div>
             </div>
 
-            {/* Subscriptions */}
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-md mb-6">
-              <h2 className="text-[#96c5a8] text-xl font-semibold mb-4 border-b border-[#366347]/50 pb-2">
-                Subscriptions
-              </h2>
-              <div className="overflow-x-auto">
-                <table className="w-full text-left">
-                  <thead>
-                    <tr className="bg-[#1b3124]/50 text-white">
-                      <th className="px-4 py-3 text-sm font-medium">Subscription ID</th>
-                      <th className="px-4 py-3 text-sm font-medium">Start Date</th>
-                      <th className="px-4 py-3 text-sm font-medium">Status</th>
-                      <th className="px-4 py-3 text-sm font-medium">Amount</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {subscriptions.map((sub, index) => (
-                      <tr key={index} className="border-t border-[#366347]/30 hover:bg-[#1b3124]/30 transition-colors">
-                        <td className="px-4 py-3 text-white">{sub.id}</td>
-                        <td className="px-4 py-3 text-white">{formatDate(sub.startDate)}</td>
-                        <td className="px-4 py-3">
-                          <span className="inline-block px-3 py-1 bg-[#366347]/50 rounded-full text-sm text-white">
-                            {sub.status}
-                          </span>
-                        </td>
-                        <td className="px-4 py-3 text-white">{sub.amount}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
             {/* Account Settings */}
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-md">
               <h2 className="text-[#96c5a8] text-xl font-semibold mb-4 border-b border-[#366347]/50 pb-2">
