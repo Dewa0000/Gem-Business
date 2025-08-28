@@ -27,9 +27,7 @@ function MyAccount() {
       { id: "#ORD12345", date: "2025-08-01", status: "Delivered", amount: "$150.00" },
       { id: "#ORD12346", date: "2025-07-15", status: "Processing", amount: "$200.00" },
     ]);
-    setSubscriptions([
-      { id: "#SUB789", startDate: "2025-08-01", status: "Active", amount: "$50.00/month" },
-    ]);
+   
   }, []);
 
   const handleLogout = () => {
