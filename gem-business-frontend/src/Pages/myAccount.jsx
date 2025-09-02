@@ -8,27 +8,35 @@ function MyAccount() {
   const [error, setError] = useState("");
 
   const formatDate = (input) => {
-    const date = new Date(input);
-    return isNaN(date) ? "Invalid date" : date.toLocaleDateString("en-GB", {
-      day: "2-digit",
-      month: "short",
-      year: "numeric",
-    });
-  };
+    const date = new Date(input)
+    if(isNaN(date)) return "Invalid date";
+    return date.toLocaleDateString("en-GB", {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric',
+    })
+  }
 
-  // Mock data for visual appeal (no functionality)
   useEffect(() => {
-    setUserData({
-      fullName: "Sophia Emerald",
-      email: "sophia@luxe-gems.com",
-      phoneNumber: "+91-9876543210",
-    });
-    setOrders([
-      { id: "#ORD12345", date: "2025-08-01", status: "Delivered", amount: "$150.00" },
-      { id: "#ORD12346", date: "2025-07-15", status: "Processing", amount: "$200.00" },
-    ]);
+    const fetchUserData = async () => {
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://gem-business.onrender.com"
+      const token = localStorage.getItem("token");
+
+      if(!token){
+        setError("Please login again");
+        navigate("/login");
+        return
+      }
+
+      try{
+const res = await fetch("")
+      }catch(err){
+
+      }
+    }
+  },[])
    
-  }, []);
+  
 
   const handleLogout = () => {
     navigate("/login");
