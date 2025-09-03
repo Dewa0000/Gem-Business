@@ -132,7 +132,7 @@ setError(err.message);
                         <td className="px-4 py-3 text-white">{formatDate(order.date)}</td>
                         <td className="px-4 py-3">
                           <span className="inline-block px-3 py-1 bg-[#366347]/50 rounded-full text-sm text-white">
-                            {order.status}
+                            {order.orderItems}
                           </span>
                         </td>
                         <td className="px-4 py-3 text-white">{order.amount}</td>
