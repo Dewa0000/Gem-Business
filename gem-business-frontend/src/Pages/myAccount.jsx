@@ -104,9 +104,9 @@ setError(err.message);
                 Personal Information
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <p className="text-white text-lg font-medium">Name: <span className="text-[#c5dceb]">{userData.fullName || "N/A"}</span></p>
+                <p className="text-white text-lg font-medium">Name: <span className="text-[#c5dceb]">{userData.userName || "N/A"}</span></p>
                 <p className="text-white text-lg font-medium">Email: <span className="text-[#c5dceb]">{userData.email || "N/A"}</span></p>
-                <p className="text-white text-lg font-medium">Phone: <span className="text-[#c5dceb]">{userData.phoneNumber || "N/A"}</span></p>
+                <p className="text-white text-lg font-medium">Phone: <span className="text-[#c5dceb]">{userData.moNumber || "N/A"}</span></p>
               </div>
             </div>
 
