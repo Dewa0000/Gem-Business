@@ -9,7 +9,7 @@ function MyAccount() {
 
   const formatDate = (input) => {
     const date = new Date(input)
-    if(isNaN(date)) return "Invalid date";
+    if (isNaN(date)) return "Invalid date";
     return date.toLocaleDateString("en-GB", {
       day: '2-digit',
       month: 'short',
@@ -22,23 +22,63 @@ function MyAccount() {
       const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://gem-business.onrender.com"
       const token = localStorage.getItem("token");
 
-      if(!token){
+      if (!token) {
         setError("Please login again");
         navigate("/login");
         return
       }
 
-      try{
-const res = await fetch("")
-      }catch(err){
+      try {
+        const res = await fetch(`${backendUrl}/auth/me`,{
+          method: "GET",
+          headers:{
+            Authorization: `Bearer ${token}`,
+            'Content-Type' : 'application/json'
+          }
+        });
+        if(!res.ok) throw new Error("Failed to fetch user data");
+        const data = await res.json();
+        setUserData(data || {});
 
+      } catch (err) {
+setError(err.message);
       }
     }
-  },[])
-   
-  
+    fetchUserData();
+  }, [navigate])
+
+   useEffect(() => {
+    async function fetchOrders(){
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://gem-business.onrender.com";
+      const token = localStorage.getItem("token");
+      if(!token){
+        setError("Failed to login");
+        navigate("/login");
+        return
+      }
+      try{
+         const res = await fetch(`${backendUrl}/my-orders`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type' : 'application/json'
+          }
+         });
+         const data = await res.json();
+
+         if(!res.ok){
+          setOrders(data || []);
+         }else{
+          setError(data.message || "Unable to fetch Order")
+         }
+      }catch(err){
+            setError(err.message)
+      }
+    }
+    fetchOrders();
+   },[navigate])
 
   const handleLogout = () => {
+    localStorage.removeItem("token")
     navigate("/login");
   };
 
