@@ -120,8 +120,8 @@ setError(err.message);
                   <thead>
                     <tr className="bg-[#1b3124]/50 text-white">
                       <th className="px-4 py-3 text-sm font-medium">Order ID</th>
-                      <th className="px-4 py-3 text-sm font-medium">Date</th>
-                      <th className="px-4 py-3 text-sm font-medium">Status</th>
+                      <th className="px-4 py-3 text-sm font-medium">Name</th>
+                      <th className="px-4 py-3 text-sm font-medium">Mobile Number</th>
                       <th className="px-4 py-3 text-sm font-medium">Amount</th>
                     </tr>
                   </thead>
