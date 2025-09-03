@@ -129,13 +129,13 @@ setError(err.message);
                     {orders.map((order, index) => (
                       <tr key={index} className="border-t border-[#366347]/30 hover:bg-[#1b3124]/30 transition-colors">
                         <td className="px-4 py-3 text-white">{order.id}</td>
-                        <td className="px-4 py-3 text-white">{formatDate(order.date)}</td>
+                        <td className="px-4 py-3 text-white">{formatDate(order.createdAt || "N/A")}</td>
                         <td className="px-4 py-3">
                           <span className="inline-block px-3 py-1 bg-[#366347]/50 rounded-full text-sm text-white">
-                            {order.orderItems}
+                          {order.status || "N/A"}
                           </span>
                         </td>
-                        <td className="px-4 py-3 text-white">{order.amount}</td>
+                        <td className="px-4 py-3 text-white">{order.totalPrice || "N/A"}</td>
                       </tr>
                     ))}
                   </tbody>
