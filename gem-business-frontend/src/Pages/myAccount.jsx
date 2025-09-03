@@ -65,7 +65,7 @@ setError(err.message);
          });
          const data = await res.json();
 
-         if(!res.ok){
+         if(res.ok){
           setOrders(data || []);
          }else{
           setError(data.message || "Unable to fetch Order")
