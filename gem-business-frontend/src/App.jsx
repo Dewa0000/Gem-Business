@@ -13,6 +13,7 @@ import { CartProvider } from "./Context/cartContext"
 import CheckoutPage from './Pages/Checkout'
 import ThankYouPage from './Pages/Thankyou'
 import MyAccount from './Pages/myAccount'
+import ProtectedRoutes from './Routes/ProtectedRoutes'
 
 function App() {
 
@@ -28,10 +29,10 @@ function App() {
             <Route path='/login' element={<LoginForm />} />
             <Route path='/products' element={<ProductsPage />}></Route>
             <Route path='/about-us' element={<AboutUs />}></Route>
-            <Route path='/cart' element={<CartReviewPage />}></Route>
-            <Route path='/checkout' element={<CheckoutPage />}></Route>
+            <Route path='/cart' element={<ProtectedRoutes><CartReviewPage /></ProtectedRoutes>}></Route>
+            <Route path='/checkout' element={<ProtectedRoutes><CheckoutPage /></ProtectedRoutes>}></Route>
             <Route path='/thank-you' element={<ThankYouPage />}></Route>
-            <Route path='/my-account' element={<MyAccount/>}></Route>
+            <Route path='/my-account' element={<ProtectedRoutes><MyAccount/></ProtectedRoutes>}></Route>
           </Routes>
           <Footer />
         </Router>
