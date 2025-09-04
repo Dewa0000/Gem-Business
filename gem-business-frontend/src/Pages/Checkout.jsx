@@ -38,11 +38,7 @@ const CheckoutPage = () => {
     }
   
     const token = localStorage.getItem("token");
-    if (!token) {
-      alert("You're not logged in. Please login to place order.");
-      navigate("/login");
-      return;
-    }
+    
   
     const backendUrl = import.meta.env.VITE_BACKEND_URL;
   
