@@ -40,13 +40,7 @@ function ProductCard(){
                       >
                         Add to Cart
                       </button>
-                      <button
-                        type="button"
-                        onClick={() => {}}
-                        className="w-full sm:w-auto min-w-[120px] cursor-pointer rounded-lg h-10 px-4 bg-[#22d760] text-white text-sm font-bold hover:bg-[#18b64a] transition-colors"
-                      >
-                        Buy Now
-                      </button>
+                      
                     </div>
                   </div>
                 ))}
