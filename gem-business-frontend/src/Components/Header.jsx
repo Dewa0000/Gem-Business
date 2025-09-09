@@ -29,7 +29,7 @@ const Header = () => {
             <path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" />
           </svg>
         </div>
-        <h2 className="text-lg font-bold leading-tight tracking-[-0.015em]">Gems & Jwellery by Shruti</h2>
+        <h2 className="text-lg font-bold leading-tight tracking-[-0.015em]">Gems & Jewellery by Shruti</h2>
       </div>
 
       <div className="flex flex-1 items-center justify-end gap-8">
