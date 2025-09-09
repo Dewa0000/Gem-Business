@@ -14,6 +14,7 @@ import CheckoutPage from './Pages/Checkout'
 import ThankYouPage from './Pages/Thankyou'
 import MyAccount from './Pages/myAccount'
 import ProtectedRoutes from './Routes/ProtectedRoutes'
+import GemRecommendation from './Pages/Gem-Recommendation'
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
             <Route path='/checkout' element={<CheckoutPage />}></Route>
             <Route path='/thank-you' element={<ThankYouPage />}></Route>
             <Route path='/my-account' element={<ProtectedRoutes><MyAccount/></ProtectedRoutes>}></Route>
+            <Route path='/my-account' element={<GemRecommendation/>}></Route>
           </Routes>
           <Footer />
         </Router>
