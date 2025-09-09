@@ -8,6 +8,8 @@ function GemRecommendation() {
     dateOfBirth: "",
     timeOfBirth: "",
     placeOfBirth: "",
+    bodyWeight: "",
+    gender: "",
   });
   const [recommendation, setRecommendation] = useState(null);
   const [error, setError] = useState("");
@@ -18,17 +20,25 @@ function GemRecommendation() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.fullName || !formData.dateOfBirth || !formData.timeOfBirth || !formData.placeOfBirth) {
+    if (
+      !formData.fullName ||
+      !formData.dateOfBirth ||
+      !formData.timeOfBirth ||
+      !formData.placeOfBirth ||
+      !formData.bodyWeight ||
+      !formData.gender
+    ) {
       setError("Please fill all fields.");
       return;
     }
     setError("");
-    // Mock recommendation (replace with API call later)
+    // Mock recommendation based on new fields
     const mockGem = {
-      gemstone: "Yellow Sapphire",
-      planet: "Jupiter",
-      benefit: "Enhances wisdom and prosperity",
-      weight: "6 carats",
+      gemstone: "Emerald",
+      planet: "Mercury",
+      benefit: "Boosts communication and intellect",
+      weight: `${parseInt(formData.bodyWeight) > 60 ? "7" : "5"} carats`, // Simple weight logic
+      note: `Recommended for ${formData.gender === "Male" ? "men" : "women"} based on astrology.`,
     };
     setRecommendation(mockGem);
   };
@@ -85,6 +95,25 @@ function GemRecommendation() {
                   placeholder="Place of Birth"
                   className="p-2 bg-[#122118] border border-[#366347]/50 rounded text-white focus:outline-none focus:border-[#96c5a8]"
                 />
+                <input
+                  type="number"
+                  name="bodyWeight"
+                  value={formData.bodyWeight}
+                  onChange={handleChange}
+                  placeholder="Body Weight (kg)"
+                  className="p-2 bg-[#122118] border border-[#366347]/50 rounded text-white focus:outline-none focus:border-[#96c5a8]"
+                />
+                <select
+                  name="gender"
+                  value={formData.gender}
+                  onChange={handleChange}
+                  className="p-2 bg-[#122118] border border-[#366347]/50 rounded text-white focus:outline-none focus:border-[#96c5a8]"
+                >
+                  <option value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
                 <button
                   type="submit"
                   className="md:col-span-2 bg-[#96c5a8] text-white p-2 rounded hover:bg-[#a0d1b9] transition-colors"
@@ -112,6 +141,9 @@ function GemRecommendation() {
                   </p>
                   <p className="text-white text-lg font-medium">
                     Recommended Weight: <span className="text-[#c5dceb]">{recommendation.weight}</span>
+                  </p>
+                  <p className="text-white text-lg font-medium col-span-full">
+                    Note: <span className="text-[#c5dceb]">{recommendation.note}</span>
                   </p>
                 </div>
                 <p className="text-white text-sm mt-4">
