@@ -34,7 +34,7 @@ function App() {
             <Route path='/checkout' element={<CheckoutPage />}></Route>
             <Route path='/thank-you' element={<ThankYouPage />}></Route>
             <Route path='/my-account' element={<ProtectedRoutes><MyAccount/></ProtectedRoutes>}></Route>
-            <Route path='/my-account' element={<GemRecommendation/>}></Route>
+            <Route path='/gem-recommendation' element={<GemRecommendation/>}></Route>
           </Routes>
           <Footer />
         </Router>
