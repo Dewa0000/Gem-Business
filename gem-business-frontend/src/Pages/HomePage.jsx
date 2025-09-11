@@ -7,27 +7,27 @@ const HomePage = () => {
       style={{ fontFamily: '"Plus Jakarta Sans", "Noto Sans", sans-serif' }}
     >
       <div className="layout-container flex h-full grow flex-col">
-        <div className="px-40 flex flex-1 justify-center py-5">
-          <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
+        <div className="px-4 sm:px-6 md:px-10 flex flex-1 justify-center py-5">
+          <div className="layout-content-container flex flex-col max-w-[960px] w-full flex-1">
             {/* Hero Section */}
             <div className="@container">
               <div className="@[480px]:p-4">
                 <div
-                  className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4"
+                  className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4 sm:p-6"
                   style={{
                     backgroundImage:
                       'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE")',
                   }}
                 >
                   <div className="flex flex-col gap-2 text-center">
-                    <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                    <h1 className="text-white text-2xl sm:text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
                       Discover the Essence of Elegance
                     </h1>
-                    <h2 className="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                    <h2 className="text-white text-xs sm:text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
                       Explore our curated collection of exquisite gems and jewelry, crafted with passion and precision.
                     </h2>
                   </div>
-                  <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#39e079] text-[#122118] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+                  <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 sm:h-10 px-3 sm:px-4 @[480px]:h-12 @[480px]:px-5 bg-[#39e079] text-[#122118] text-xs sm:text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
                     <span className="truncate">Shop Now</span>
                   </button>
                 </div>
@@ -35,12 +35,12 @@ const HomePage = () => {
             </div>
 
             {/* Featured Collections */}
-            <h2 className="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+            <h2 className="text-white text-[18px] sm:text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
               Featured Collections
             </h2>
-            <div className="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              <div className="flex items-stretch p-4 gap-3">
-                <div className="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+            <div className="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [touch-action:pan-x] [&::-webkit-scrollbar]:hidden">
+              <div className="flex items-stretch p-2 sm:p-4 gap-2 sm:gap-3">
+                <div className="flex h-full flex-1 flex-col gap-2 sm:gap-4 rounded-lg min-w-40 sm:min-w-60">
                   <div
                     className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
                     style={{
@@ -49,11 +49,11 @@ const HomePage = () => {
                     }}
                   ></div>
                   <div>
-                    <p className="text-white text-base font-medium leading-normal">Radiant Rings</p>
-                    <p className="text-[#96c5a8] text-sm font-normal leading-normal">Explore our collection of handcrafted rings, perfect for any occasion.</p>
+                    <p className="text-white text-sm sm:text-base font-medium leading-normal">Radiant Rings</p>
+                    <p className="text-[#96c5a8] text-xs sm:text-sm font-normal leading-normal">Explore our collection of handcrafted rings, perfect for any occasion.</p>
                   </div>
                 </div>
-                <div className="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                <div className="flex h-full flex-1 flex-col gap-2 sm:gap-4 rounded-lg min-w-40 sm:min-w-60">
                   <div
                     className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
                     style={{
@@ -62,11 +62,11 @@ const HomePage = () => {
                     }}
                   ></div>
                   <div>
-                    <p className="text-white text-base font-medium leading-normal">Elegant Necklaces</p>
-                    <p className="text-[#96c5a8] text-sm font-normal leading-normal">Discover necklaces that capture the essence of sophistication and style.</p>
+                    <p className="text-white text-sm sm:text-base font-medium leading-normal">Elegant Necklaces</p>
+                    <p className="text-[#96c5a8] text-xs sm:text-sm font-normal leading-normal">Discover necklaces that capture the essence of sophistication and style.</p>
                   </div>
                 </div>
-                <div className="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                <div className="flex h-full flex-1 flex-col gap-2 sm:gap-4 rounded-lg min-w-40 sm:min-w-60">
                   <div
                     className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
                     style={{
@@ -75,8 +75,8 @@ const HomePage = () => {
                     }}
                   ></div>
                   <div>
-                    <p className="text-white text-base font-medium leading-normal">Dazzling Earrings</p>
-                    <p className="text-[#96c5a8] text-sm font-normal leading-normal">Find the perfect pair of earrings to complement your unique beauty.</p>
+                    <p className="text-white text-sm sm:text-base font-medium leading-normal">Dazzling Earrings</p>
+                    <p className="text-[#96c5a8] text-xs sm:text-sm font-normal leading-normal">Find the perfect pair of earrings to complement your unique beauty.</p>
                   </div>
                 </div>
               </div>
@@ -84,18 +84,18 @@ const HomePage = () => {
 
             {/* Exclusive Offer */}
             <div className="@container">
-              <div className="flex flex-col justify-end gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
+              <div className="flex flex-col justify-end gap-4 px-4 py-5 sm:py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
                 <div className="flex flex-col gap-2 text-center">
-                  <h1 className="text-white tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
+                  <h1 className="text-white tracking-light text-xl sm:text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
                     Exclusive Offer
                   </h1>
-                  <p className="text-white text-base font-normal leading-normal max-w-[720px]">
+                  <p className="text-white text-sm sm:text-base font-normal leading-normal max-w-[720px]">
                     Sign up for our newsletter and receive 10% off your first purchase.
                   </p>
                 </div>
                 <div className="flex flex-1 justify-center">
                   <div className="flex justify-center">
-                    <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#39e079] text-[#122118] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow">
+                    <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 sm:h-10 px-3 sm:px-4 @[480px]:h-12 @[480px]:px-5 bg-[#39e079] text-[#122118] text-xs sm:text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow">
                       <span className="truncate">Subscribe</span>
                     </button>
                   </div>
@@ -105,18 +105,18 @@ const HomePage = () => {
 
             {/* Our Story */}
             <div className="@container">
-              <div className="flex flex-col gap-10 px-4 py-10">
-                <div className="flex flex-col gap-4">
-                  <h1 className="text-white tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
+              <div className="flex flex-col gap-6 sm:gap-10 px-4 py-5 sm:py-10">
+                <div className="flex flex-col gap-3 sm:gap-4">
+                  <h1 className="text-white tracking-light text-xl sm:text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
                     Our Story
                   </h1>
-                  <p className="text-white text-base font-normal leading-normal max-w-[720px]">
+                  <p className="text-white text-sm sm:text-base font-normal leading-normal max-w-[720px]">
                     At Luxe Gems, we believe in the power of jewelry to express individuality and celebrate life's special moments. Our journey began with a passion for sourcing the
                     finest gems and crafting timeless pieces that resonate with elegance and sophistication.
                   </p>
                 </div>
-                <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-0">
-                  <div className="flex flex-1 gap-3 rounded-lg border border-[#366347] bg-[#1b3124] p-4 flex-col">
+                <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-2 sm:gap-3 p-0">
+                  <div className="flex flex-1 gap-2 sm:gap-3 rounded-lg border border-[#366347] bg-[#1b3124] p-2 sm:p-4 flex-col">
                     <div className="text-white" data-icon="Diamond" data-size="24px" data-weight="regular">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
                         <path
@@ -125,11 +125,11 @@ const HomePage = () => {
                       </svg>
                     </div>
                     <div className="flex flex-col gap-1">
-                      <h2 className="text-white text-base font-bold leading-tight">Exceptional Quality</h2>
-                      <p className="text-[#96c5a8] text-sm font-normal leading-normal">We are committed to using only the highest quality materials and craftsmanship.</p>
+                      <h2 className="text-white text-sm sm:text-base font-bold leading-tight">Exceptional Quality</h2>
+                      <p className="text-[#96c5a8] text-xs sm:text-sm font-normal leading-normal">We are committed to using only the highest quality materials and craftsmanship.</p>
                     </div>
                   </div>
-                  <div className="flex flex-1 gap-3 rounded-lg border border-[#366347] bg-[#1b3124] p-4 flex-col">
+                  <div className="flex flex-1 gap-2 sm:gap-3 rounded-lg border border-[#366347] bg-[#1b3124] p-2 sm:p-4 flex-col">
                     <div className="text-white" data-icon="Heart" data-size="24px" data-weight="regular">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
                         <path
@@ -138,11 +138,11 @@ const HomePage = () => {
                       </svg>
                     </div>
                     <div className="flex flex-col gap-1">
-                      <h2 className="text-white text-base font-bold leading-tight">Ethical Sourcing</h2>
-                      <p className="text-[#96c5a8] text-sm font-normal leading-normal">Our gems are ethically sourced, ensuring responsible and sustainable practices.</p>
+                      <h2 className="text-white text-sm sm:text-base font-bold leading-tight">Ethical Sourcing</h2>
+                      <p className="text-[#96c5a8] text-xs sm:text-sm font-normal leading-normal">Our gems are ethically sourced, ensuring responsible and sustainable practices.</p>
                     </div>
                   </div>
-                  <div className="flex flex-1 gap-3 rounded-lg border border-[#366347] bg-[#1b3124] p-4 flex-col">
+                  <div className="flex flex-1 gap-2 sm:gap-3 rounded-lg border border-[#366347] bg-[#1b3124] p-2 sm:p-4 flex-col">
                     <div className="text-white" data-icon="Sparkle" data-size="24px" data-weight="regular">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
                         <path
@@ -151,8 +151,8 @@ const HomePage = () => {
                       </svg>
                     </div>
                     <div className="flex flex-col gap-1">
-                      <h2 className="text-white text-base font-bold leading-tight">Timeless Designs</h2>
-                      <p className="text-[#96c5a8] text-sm font-normal leading-normal">
+                      <h2 className="text-white text-sm sm:text-base font-bold leading-tight">Timeless Designs</h2>
+                      <p className="text-[#96c5a8] text-xs sm:text-sm font-normal leading-normal">
                         Our designs are created to be cherished for generations, blending classic and contemporary styles.
                       </p>
                     </div>
@@ -162,11 +162,11 @@ const HomePage = () => {
             </div>
 
             {/* Customer Favorites */}
-            <h2 className="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+            <h2 className="text-white text-[18px] sm:text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
               Customer Favorites
             </h2>
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-              <div className="flex flex-col gap-3 pb-3">
+            <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-2 sm:gap-3 p-2 sm:p-4">
+              <div className="flex flex-col gap-2 sm:gap-3 pb-2 sm:pb-3">
                 <div
                   className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
                   style={{
@@ -175,11 +175,11 @@ const HomePage = () => {
                   }}
                 ></div>
                 <div>
-                  <p className="text-white text-base font-medium leading-normal">Classic Diamond Stud Earrings</p>
-                  <p className="text-[#96c5a8] text-sm font-normal leading-normal">Timeless elegance for everyday wear.</p>
+                  <p className="text-white text-sm sm:text-base font-medium leading-normal">Classic Diamond Stud Earrings</p>
+                  <p className="text-[#96c5a8] text-xs sm:text-sm font-normal leading-normal">Timeless elegance for everyday wear.</p>
                 </div>
               </div>
-              <div className="flex flex-col gap-3 pb-3">
+              <div className="flex flex-col gap-2 sm:gap-3 pb-2 sm:pb-3">
                 <div
                   className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
                   style={{
@@ -188,11 +188,11 @@ const HomePage = () => {
                   }}
                 ></div>
                 <div>
-                  <p className="text-white text-base font-medium leading-normal">Sapphire and Diamond Pendant</p>
-                  <p className="text-[#96c5a8] text-sm font-normal leading-normal">A stunning centerpiece for any outfit.</p>
+                  <p className="text-white text-sm sm:text-base font-medium leading-normal">Sapphire and Diamond Pendant</p>
+                  <p className="text-[#96c5a8] text-xs sm:text-sm font-normal leading-normal">A stunning centerpiece for any outfit.</p>
                 </div>
               </div>
-              <div className="flex flex-col gap-3 pb-3">
+              <div className="flex flex-col gap-2 sm:gap-3 pb-2 sm:pb-3">
                 <div
                   className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
                   style={{
@@ -201,8 +201,8 @@ const HomePage = () => {
                   }}
                 ></div>
                 <div>
-                  <p className="text-white text-base font-medium leading-normal">Ruby and Gold Ring</p>
-                  <p className="text-[#96c5a8] text-sm font-normal leading-normal">A bold statement of style and sophistication.</p>
+                  <p className="text-white text-sm sm:text-base font-medium leading-normal">Ruby and Gold Ring</p>
+                  <p className="text-[#96c5a8] text-xs sm:text-sm font-normal leading-normal">A bold statement of style and sophistication.</p>
                 </div>
               </div>
             </div>
