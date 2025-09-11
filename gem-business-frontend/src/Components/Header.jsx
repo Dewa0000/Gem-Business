@@ -64,7 +64,7 @@ const Header = () => {
             className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#1b3124] text-white gap-2"
           >
             <FaUser size={20} />
-            <span className="truncate">Sign In</span>
+            
           </NavLink>
         )}
 
