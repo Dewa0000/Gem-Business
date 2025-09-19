@@ -64,7 +64,7 @@ function LoginForm() {
 
             {/* Title */}
             <h2 className="text-white tracking-tight text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">
-              Welcome Back to AETHELRED
+              Welcome Back to Gems & Jewellery by Shruti
             </h2>
 
             {/* Error message */}
