@@ -25,7 +25,7 @@ const Header = () => {
     <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#366347] px-10 py-3 bg-[#122118] text-white">
       <div className="flex items-center gap-4">
         <div className="w-4 h-4">
-          <svg viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 48 48" fill="currentColor" xmlns="gem-business-frontend\src\assets\Products\Logo.png">
             <path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" />
           </svg>
         </div>
