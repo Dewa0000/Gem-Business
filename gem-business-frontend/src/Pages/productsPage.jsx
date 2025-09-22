@@ -21,6 +21,9 @@ const ProductsPage = () => {
 
             {/* Product Grid */}
             <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-6 p-4">
+            <p className="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">
+                Precious Stones
+              </p>
               <ProductCard/>
             </div>
 
