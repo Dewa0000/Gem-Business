@@ -2,7 +2,7 @@ import React from "react";
 import ProductCard from "../Components/productCard";
 
 const ProductsPage = () => {
-  
+
 
   return (
     <div
@@ -19,12 +19,17 @@ const ProductsPage = () => {
               </p>
             </div>
 
-            {/* Product Grid */}
-            <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-6 p-4">
-            <p className="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">
+            {/* Product Grid Section */}
+            <div className="p-4">
+              {/* Category Title */}
+              <p className="text-white tracking-light text-[32px] font-bold leading-tight mb-4">
                 Precious Stones
               </p>
-              <ProductCard category="Precious stones"/>
+
+              {/* Product Grid */}
+              <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-6">
+                <ProductCard category="Precious stones" />
+              </div>
             </div>
 
           </div>
