@@ -24,7 +24,7 @@ const ProductsPage = () => {
             <p className="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">
                 Precious Stones
               </p>
-              <ProductCard/>
+              <ProductCard category="Precious stones"/>
             </div>
 
           </div>

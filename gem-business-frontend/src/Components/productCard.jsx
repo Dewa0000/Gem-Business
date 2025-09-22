@@ -2,13 +2,16 @@ import React from "react";
 import FetchProducts from "../Hooks/useFetchProducts";
 import { useCart } from "../Context/cartContext";
 
-function ProductCard(){
+function ProductCard({category}){
     const {products,error} = FetchProducts();
     const {addtoCart} = useCart();
+
+    const filterProducts = Array.isArray(products) ? 
+    products.filter((product) => product.category === category) : [];
     return (
         <>
-        {Array.isArray(products) &&
-                products.map((product) => (
+        {Array.isArray(filterProducts) &&
+                filterProducts.map((product) => (
                   <div
                     key={product._id}
                     className="flex flex-col gap-3 pb-4 bg-[#0f1a13] rounded-xl p-3 shadow-md"
