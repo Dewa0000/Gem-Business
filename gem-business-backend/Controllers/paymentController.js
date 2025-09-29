@@ -3,7 +3,7 @@ const Insta = require("instamojo-nodejs");
 
 // Initialize once
 Insta.setKeys(process.env.INSTA_API_KEY, process.env.INSTA_AUTH_TOKEN);
-Insta.isSandboxMode(true); // set false in production
+Insta.isSandboxMode(false); // set false in production
 
 const paymentController = async (req, res) => {
     try {
