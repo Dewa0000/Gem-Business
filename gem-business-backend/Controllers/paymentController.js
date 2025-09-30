@@ -2,6 +2,9 @@
 const Insta = require("instamojo-nodejs");
 
 // Initialize once
+console.log("API Key:", process.env.INSTA_API_KEY);
+console.log("Auth Token:", process.env.INSTA_AUTH_TOKEN);
+
 Insta.setKeys(process.env.INSTA_API_KEY, process.env.INSTA_AUTH_TOKEN);
 // true = sandbox, false = production
 Insta.isSandboxMode(false);
