@@ -220,9 +220,7 @@ const CheckoutPage = () => {
                     required
                   >
                     <option value="">Select Country</option>
-                    <option value="one">one</option>
-                    <option value="two">two</option>
-                    <option value="three">three</option>
+                    <option value="one">India</option>
                   </select>
                 </label>
               </div>
@@ -272,25 +270,12 @@ const CheckoutPage = () => {
                     type="radio"
                     className="h-5 w-5 border-2 border-[#dbe0e6] bg-transparent text-transparent checked:border-white checked:bg-white focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-white"
                     name="paymentMethod"
-                    value="Credit Card"
-                    checked={form.paymentMethod === "Credit Card"}
+                    value="QR Code"
+                    checked={form.paymentMethod === "QR Code"}
                     onChange={handleChange}
                   />
                   <div className="flex grow flex-col">
-                    <p className="text-white text-sm font-medium leading-normal">Credit Card</p>
-                  </div>
-                </label>
-                <label className="flex items-center gap-4 rounded-lg border border-solid border-[#dbe0e6] p-[15px]">
-                  <input
-                    type="radio"
-                    className="h-5 w-5 border-2 border-[#dbe0e6] bg-transparent text-transparent checked:border-white checked:bg-white focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-white"
-                    name="paymentMethod"
-                    value="PayPal"
-                    checked={form.paymentMethod === "PayPal"}
-                    onChange={handleChange}
-                  />
-                  <div className="flex grow flex-col">
-                    <p className="text-white text-sm font-medium leading-normal">PayPal</p>
+                    <p className="text-white text-sm font-medium leading-normal">QR Code</p>
                   </div>
                 </label>
               </div>
