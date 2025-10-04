@@ -74,8 +74,9 @@ const CheckoutPage = () => {
   
       if (res.ok) {
         console.log("Order placed successfully:", data);
-        setCart([]); // clear cart
-        navigate("/thank-you");
+        navigate("/payment", { 
+          state: { totalPrice: total, orderId: data._id } 
+        });
       } else {
         console.error("Error placing order:", data.error || data.message);
         alert(data.error || data.message || "Something went wrong");
