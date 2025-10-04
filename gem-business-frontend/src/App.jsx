@@ -15,6 +15,7 @@ import ThankYouPage from './Pages/Thankyou'
 import MyAccount from './Pages/myAccount'
 import ProtectedRoutes from './Routes/ProtectedRoutes'
 import GemRecommendation from './Pages/Gem-Recommendation'
+import PaymentPage from './Pages/paymentpage'
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
             <Route path='/thank-you' element={<ThankYouPage />}></Route>
             <Route path='/my-account' element={<ProtectedRoutes><MyAccount/></ProtectedRoutes>}></Route>
             <Route path='/gem-recommendation' element={<GemRecommendation/>}></Route>
+            <Route path='/payment' element={<PaymentPage/>}></Route>
           </Routes>
           <Footer />
         </Router>
