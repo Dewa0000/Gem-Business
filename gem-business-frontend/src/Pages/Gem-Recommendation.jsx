@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import useFetchProducts from "../Hooks/useFetchProducts"
+import useFetchProducts from "../Hooks/useFetchProducts";
 
 function GemRecommendation() {
   const navigate = useNavigate();
@@ -40,31 +40,67 @@ function GemRecommendation() {
     }
     setError("");
 
-    // 🧠 Generate mock recommendation
-    const mockGem = {
-      gemstone: "Emerald",
-      planet: "Mercury",
-      benefit: "Boosts communication and intellect",
-      weight: `${parseInt(formData.bodyWeight) > 60 ? "7" : "5"} carats`,
-      note: `Recommended for ${
-        formData.gender === "Male" ? "men" : "women"
-      } based on astrology.`,
-      reason:
-        "Your Mercury placement suggests enhanced intellectual growth with Emerald.",
-      priceRange: `$${parseInt(formData.budget) - 50} - $${
-        parseInt(formData.budget) + 50
-      }`,
+    // 🪄 Randomly select a product within budget
+    const filteredProducts = products.filter(
+      (p) => p.price <= parseInt(formData.budget)
+    );
+    const randomProduct =
+      filteredProducts[Math.floor(Math.random() * filteredProducts.length)];
+    if (!randomProduct) {
+      setError("No products available within your budget.");
+      setRecommendation(null);
+      return;
+    }
+
+    // Determine gemstone and astrology details
+    const gemstone = randomProduct.name.split(" ")[0]; // Extract first word as gemstone
+    const astrologyData = {
+      Emerald: {
+        planet: "Mercury",
+        benefit: "Boosts communication and intellect",
+        reason: "Your Mercury placement suggests enhanced intellectual growth.",
+      },
+      Ruby: {
+        planet: "Sun",
+        benefit: "Enhances vitality and leadership",
+        reason: "Your Sun alignment indicates a need for strength and confidence.",
+      },
+      Sapphire: {
+        planet: "Saturn",
+        benefit: "Promotes discipline and wisdom",
+        reason: "Your Saturn influence calls for stability and focus.",
+      },
+      Diamond: {
+        planet: "Venus",
+        benefit: "Attracts love and prosperity",
+        reason: "Your Venus influence enhances charm and financial growth.",
+      },
+      // Add more gemstones as needed based on your product catalog
     };
 
-    // 🪄 Match product from catalog based on gemstone name + budget
-    const matchedProduct = products.find(
-      (p) =>
-        p.name.toLowerCase().includes(mockGem.gemstone.toLowerCase()) &&
-        p.price <= parseInt(formData.budget)
-    );
+    const gemDetails = astrologyData[gemstone] || {
+      planet: "Unknown",
+      benefit: "General well-being",
+      reason: "This gem aligns with your astrological energy.",
+    };
+    const weight = `${parseInt(formData.bodyWeight) > 60 ? "7" : "5"} carats`;
+    const note = `Recommended for ${
+      formData.gender === "Male" ? "men" : "women"
+    } based on astrology.`;
+    const priceRange = `$${parseInt(formData.budget) - 50} - $${
+      parseInt(formData.budget) + 50
+    }`;
 
-    mockGem.product = matchedProduct || null;
-    setRecommendation(mockGem);
+    setRecommendation({
+      gemstone,
+      planet: gemDetails.planet,
+      benefit: gemDetails.benefit,
+      weight,
+      note,
+      reason: gemDetails.reason,
+      priceRange,
+      product: randomProduct,
+    });
   };
 
   const renderChart = () => {
@@ -106,7 +142,7 @@ function GemRecommendation() {
     >
       <div className="layout-container flex h-full grow flex-col">
         <div className="px-4 sm:px-6 md:px-10 flex flex-1 justify-center py-10">
-          <div className="layout-content-container flex flex-col max-w-[1000px] w-full flex-1">
+          <div className="layout-content-container flex flex-col max-w-full sm:max-w-[800px] md:max-w-[1000px] w-full flex-1">
 
             {/* Header Section */}
             <div className="flex flex-wrap justify-between items-center gap-4 p-6 bg-[#1b3124]/80 rounded-xl shadow-lg mb-6">
@@ -122,7 +158,7 @@ function GemRecommendation() {
               <h2 className="text-[#96c5a8] text-xl font-semibold mb-4 border-b border-[#366347]/50 pb-2">
                 Enter Your Details
               </h2>
-              <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4">
                 <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} placeholder="Full Name" className="p-2 bg-[#122118] border border-[#366347]/50 rounded text-white focus:outline-none focus:border-[#96c5a8]" />
                 <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} className="p-2 bg-[#122118] border border-[#366347]/50 rounded text-white focus:outline-none focus:border-[#96c5a8]" />
                 <input type="time" name="timeOfBirth" value={formData.timeOfBirth} onChange={handleChange} className="p-2 bg-[#122118] border border-[#366347]/50 rounded text-white focus:outline-none focus:border-[#96c5a8]" />
@@ -160,7 +196,7 @@ function GemRecommendation() {
                 </h2>
 
                 {formData.chartStyle === "table" ? (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4">
                     <p>Gemstone: <span className="text-[#c5dceb]">{recommendation.gemstone}</span></p>
                     <p>Associated Planet: <span className="text-[#c5dceb]">{recommendation.planet}</span></p>
                     <p>Benefit: <span className="text-[#c5dceb]">{recommendation.benefit}</span></p>
@@ -179,11 +215,11 @@ function GemRecommendation() {
                     <h3 className="text-[#96c5a8] text-lg font-semibold mb-2">
                       Suggested Product from Catalogue
                     </h3>
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-4 sm:flex-col sm:items-start">
                       <img
                         src={recommendation.product.image}
                         alt={recommendation.product.name}
-                        className="w-24 h-24 object-cover rounded-lg border border-[#366347]/50"
+                        className="w-20 sm:w-24 h-20 sm:h-24 object-cover rounded-lg border border-[#366347]/50"
                       />
                       <div>
                         <p className="text-white font-medium text-lg">
