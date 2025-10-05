@@ -1,19 +1,29 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
-const FetchProducts =  () => {
-     const [products,setProducts] = useState([]);
-     const [error, setError] = useState("")
-    try{
-     async function fetchProducts(){
-            const res = await fetch("https://gem-business.onrender.com/products");
-            const data = await res.json();
-            setProducts(data)
-        }
-        fetchProducts();
-    }   catch(err){
-       setError(err.message)
-    } 
-    return {products,error}
-}
+const useFetchProducts = () => {
+  const [products, setProducts] = useState([]);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(true);
 
-export default FetchProducts;
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        setLoading(true);
+        const res = await fetch("https://gem-business.onrender.com/products");
+        if (!res.ok) throw new Error("Failed to fetch products");
+        const data = await res.json();
+        setProducts(data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  return { products, error, loading };
+};
+
+export default useFetchProducts;

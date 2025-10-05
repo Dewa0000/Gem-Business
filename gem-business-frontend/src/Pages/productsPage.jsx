@@ -1,9 +1,24 @@
 import React from "react";
 import ProductCard from "../Components/productCard";
+import useFetchProducts from "../Hooks/useFetchProducts"
 
 const ProductsPage = () => {
+  const { loading, error } = useFetchProducts();
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-[#122118] text-white text-2xl">
+        Loading products...
+      </div>
+    );
+  }
 
-
+  if (error) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-[#122118] text-red-400 text-xl">
+        Failed to load products: {error}
+      </div>
+    );
+  }
   return (
     <div
       className="relative flex size-full min-h-screen flex-col bg-[#122118] group/design-root overflow-x-hidden"
