@@ -14,8 +14,10 @@ function ProductInfo() {
   }, [product]);
 
   const handleAddToCart = () => {
-    console.log(`Added ${quantity} x ${product.name} to cart`);
-    navigate("/cart");
+    if (product) {
+      console.log(`Added ${quantity} x ${product.name} to cart`);
+      navigate("/cart");
+    }
   };
 
   if (loading) return <div className="text-center text-[#96c5a8] font-medium">Loading product...</div>;
