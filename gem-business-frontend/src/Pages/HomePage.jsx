@@ -13,7 +13,7 @@ const HomePage = () => {
             <div className="@container">
               <div className="@[480px]:p-4">
                 <div
-                  className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4 sm:p-6"
+                  className="flex min-h-[400px] sm:min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4 sm:p-6"
                   style={{
                     backgroundImage:
                       'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE")',
@@ -39,8 +39,8 @@ const HomePage = () => {
               Featured Collections
             </h2>
             <div className="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [touch-action:pan-x] [&::-webkit-scrollbar]:hidden">
-              <div className="flex items-stretch p-2 sm:p-4 gap-2 sm:gap-3">
-                <div className="flex h-full flex-1 flex-col gap-2 sm:gap-4 rounded-lg min-w-40 sm:min-w-60">
+              <div className="flex items-stretch p-2 sm:p-4 gap-2 sm:gap-3 flex-nowrap">
+                <div className="flex h-full flex-1 flex-col gap-2 sm:gap-4 rounded-lg min-w-32 sm:min-w-40">
                   <div
                     className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
                     style={{
@@ -53,7 +53,7 @@ const HomePage = () => {
                     <p className="text-[#96c5a8] text-xs sm:text-sm font-normal leading-normal">Explore our collection of handcrafted rings, perfect for any occasion.</p>
                   </div>
                 </div>
-                <div className="flex h-full flex-1 flex-col gap-2 sm:gap-4 rounded-lg min-w-40 sm:min-w-60">
+                <div className="flex h-full flex-1 flex-col gap-2 sm:gap-4 rounded-lg min-w-32 sm:min-w-40">
                   <div
                     className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
                     style={{
@@ -66,7 +66,7 @@ const HomePage = () => {
                     <p className="text-[#96c5a8] text-xs sm:text-sm font-normal leading-normal">Discover necklaces that capture the essence of sophistication and style.</p>
                   </div>
                 </div>
-                <div className="flex h-full flex-1 flex-col gap-2 sm:gap-4 rounded-lg min-w-40 sm:min-w-60">
+                <div className="flex h-full flex-1 flex-col gap-2 sm:gap-4 rounded-lg min-w-32 sm:min-w-40">
                   <div
                     className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
                     style={{
@@ -86,10 +86,10 @@ const HomePage = () => {
             <div className="@container">
               <div className="flex flex-col justify-end gap-4 px-4 py-5 sm:py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
                 <div className="flex flex-col gap-2 text-center">
-                  <h1 className="text-white tracking-light text-xl sm:text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
+                  <h1 className="text-white tracking-light text-xl sm:text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-full sm:max-w-[600px]">
                     Exclusive Offer
                   </h1>
-                  <p className="text-white text-sm sm:text-base font-normal leading-normal max-w-[720px]">
+                  <p className="text-white text-sm sm:text-base font-normal leading-normal max-w-full sm:max-w-[600px]">
                     Sign up for our newsletter and receive 10% off your first purchase.
                   </p>
                 </div>
@@ -107,10 +107,10 @@ const HomePage = () => {
             <div className="@container">
               <div className="flex flex-col gap-6 sm:gap-10 px-4 py-5 sm:py-10">
                 <div className="flex flex-col gap-3 sm:gap-4">
-                  <h1 className="text-white tracking-light text-xl sm:text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
+                  <h1 className="text-white tracking-light text-xl sm:text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-full sm:max-w-[600px]">
                     Our Story
                   </h1>
-                  <p className="text-white text-sm sm:text-base font-normal leading-normal max-w-[720px]">
+                  <p className="text-white text-sm sm:text-base font-normal leading-normal max-w-full sm:max-w-[600px]">
                     At Luxe Gems, we believe in the power of jewelry to express individuality and celebrate life's special moments. Our journey began with a passion for sourcing the
                     finest gems and crafting timeless pieces that resonate with elegance and sophistication.
                   </p>
