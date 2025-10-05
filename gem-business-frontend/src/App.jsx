@@ -37,6 +37,7 @@ function App() {
             <Route path='/my-account' element={<ProtectedRoutes><MyAccount/></ProtectedRoutes>}></Route>
             <Route path='/gem-recommendation' element={<GemRecommendation/>}></Route>
             <Route path='/payment' element={<PaymentPage/>}></Route>
+            <Route path="/product/:id" element={<ProductInfo />} />
           </Routes>
           <Footer />
         </Router>
