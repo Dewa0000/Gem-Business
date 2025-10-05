@@ -16,6 +16,7 @@ import MyAccount from './Pages/myAccount'
 import ProtectedRoutes from './Routes/ProtectedRoutes'
 import GemRecommendation from './Pages/Gem-Recommendation'
 import PaymentPage from './Pages/paymentpage'
+import ProductInfo from './Pages/ProductInfo'
 
 function App() {
 
