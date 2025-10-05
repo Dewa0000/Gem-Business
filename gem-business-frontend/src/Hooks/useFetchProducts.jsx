@@ -1,18 +1,22 @@
 import { useState, useEffect } from "react";
 
-const useFetchProducts = () => {
+const useFetchProducts = (id = null) => {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchProducts = async () => {
+    const fetchData = async () => {
       try {
         setLoading(true);
-        const res = await fetch("https://gem-business.onrender.com/products");
-        if (!res.ok) throw new Error("Failed to fetch products");
+        let url = "https://gem-business.onrender.com/products";
+        if (id) {
+          url = `${url}/${id}`; // Append ID for single product fetch
+        }
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`Failed to fetch ${id ? "product" : "products"}`);
         const data = await res.json();
-        setProducts(data);
+        setProducts(id ? [data] : data); // Set single product as array or full list
       } catch (err) {
         setError(err.message);
       } finally {
@@ -20,8 +24,8 @@ const useFetchProducts = () => {
       }
     };
 
-    fetchProducts();
-  }, []);
+    fetchData();
+  }, [id]); // Re-run effect when id changes
 
   return { products, error, loading };
 };
