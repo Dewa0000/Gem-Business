@@ -32,7 +32,7 @@ function ProductCard({ category }) {
           >
             {/* ✅ Product Image — Click to View Details */}
             <div
-              onClick={() => navigate(`/products/${product._id}`)} // 🔗 Navigate to details page
+              onClick={() => navigate(`/product/${product._id}`)} // 🔗 Navigate to details page
               className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
               style={{
                 backgroundImage: `url(${
