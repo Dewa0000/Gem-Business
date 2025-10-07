@@ -45,7 +45,7 @@ const Footer = () => {
               </div>
             </a>
           </div>
-          <p className="text-[#96c5a8] text-base font-normal leading-normal">© 2023 Gemsbyshruti. All rights reserved.</p>
+          <p className="text-[#96c5a8] text-base font-normal leading-normal">© 2025 Gemsbyshruti. All rights reserved.</p>
         </footer>
       </div>
     </footer>
