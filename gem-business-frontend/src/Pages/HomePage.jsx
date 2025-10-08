@@ -14,7 +14,7 @@ const HomePage = () => {
               <div className="@[480px]:p-4">
                 <div
                   className="flex min-h-[400px] sm:min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4 sm:p-6"
-                  style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBf8kdZYPVMrKOtBbEs5iOsCdQZtEBjI_gEzWVqbcvfWBJhzKRFWiRAIxsU8GUVa2CzshEd4ZgRsB5DS5z2e7ZHkHKAXaop3cZ-DOYhK7MjMGpKf-dVX2elhNvzllr5Fk6n5JidrgWRnF9N0rzYV93NURqDIzMcorF657ZzLlbFVrhpnFiIL97kRDPXtdNkWSoJtBuXmumTIDyOOV4TcpDs0yNhlk4yLtSRxU8PMC8dnXoXXL-ATkV_RXO7VbiLKuyHIIPnBhfyN3E")', }}
+                  style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE")', }}
                 >
                   <div className="flex flex-col gap-3 text-center">
                     <h1 className="text-white text-3xl sm:text-5xl font-extrabold leading-tight tracking-[-0.02em]">
