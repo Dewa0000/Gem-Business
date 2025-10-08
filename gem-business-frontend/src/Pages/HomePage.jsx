@@ -14,10 +14,7 @@ const HomePage = () => {
               <div className="@[480px]:p-4">
                 <div
                   className="flex min-h-[400px] sm:min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4 sm:p-6"
-                  style={{
-                    backgroundImage:
-                      'linear-gradient(rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://images.unsplash.com/photo-1600180758890-6dc538ecf5f3?auto=format&fit=crop&w=1470&q=80")',
-                  }}
+                  style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBf8kdZYPVMrKOtBbEs5iOsCdQZtEBjI_gEzWVqbcvfWBJhzKRFWiRAIxsU8GUVa2CzshEd4ZgRsB5DS5z2e7ZHkHKAXaop3cZ-DOYhK7MjMGpKf-dVX2elhNvzllr5Fk6n5JidrgWRnF9N0rzYV93NURqDIzMcorF657ZzLlbFVrhpnFiIL97kRDPXtdNkWSoJtBuXmumTIDyOOV4TcpDs0yNhlk4yLtSRxU8PMC8dnXoXXL-ATkV_RXO7VbiLKuyHIIPnBhfyN3E")', }}
                 >
                   <div className="flex flex-col gap-3 text-center">
                     <h1 className="text-white text-3xl sm:text-5xl font-extrabold leading-tight tracking-[-0.02em]">
