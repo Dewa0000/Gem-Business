@@ -46,22 +46,48 @@ const HomePage = () => {
               </p>
             </div>
 
-            {/* Services Section */}
+            {/* Services Section with Images */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-4 py-6">
               {[
-                "Every grade of Diamond available",
-                "100% Natural & Authorized Gemstones",
-                "CIG Certified | Gemologist Approved",
-                "18K, 20K, 22K & 23K Gold Jewellery at Minimum Making Charges",
-                "Silver Jewellery designed & personalized to your taste",
-                "Hallmark Jewellery only — because purity isn’t optional",
-                "Bespoke Custom Designs made just for you",
-              ].map((text, i) => (
+                {
+                  text: "Every grade of Diamond available",
+                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
+                },
+                {
+                  text: "100% Natural & Authorized Gemstones",
+                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
+                },
+                {
+                  text: "CIG Certified | Gemologist Approved",
+                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
+                },
+                {
+                  text: "18K, 20K, 22K & 23K Gold Jewellery at Minimum Making Charges",
+                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
+                },
+                {
+                  text: "Silver Jewellery designed & personalized to your taste",
+                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
+                },
+                {
+                  text: "Hallmark Jewellery only — because purity isn’t optional",
+                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
+                },
+                {
+                  text: "Bespoke Custom Designs made just for you",
+                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
+                },
+              ].map((item, i) => (
                 <div
                   key={i}
-                  className="rounded-lg border border-[#366347] bg-[#1b3124] p-4 sm:p-6 text-[#e8f3ec] text-sm sm:text-base"
+                  className="rounded-lg border border-[#366347] bg-[#1b3124] p-4 sm:p-6 text-[#e8f3ec] text-sm sm:text-base relative"
                 >
-                  {text}
+                  <img
+                    src={item.img}
+                    alt={item.text}
+                    className="absolute inset-0 w-full h-full object-cover opacity-20 rounded-lg"
+                  />
+                  <div className="relative z-10">{item.text}</div>
                 </div>
               ))}
             </div>
@@ -104,7 +130,7 @@ const HomePage = () => {
               ))}
             </div>
 
-            {/* Our Story Section */}
+            {/* Our Story Section with Images */}
             <div className="flex flex-col gap-6 sm:gap-10 px-4 py-10 text-center">
               <h1 className="text-[#96c5a8] text-2xl sm:text-4xl font-bold leading-tight tracking-[-0.02em]">
                 Our Craftsmanship Promise
@@ -119,42 +145,59 @@ const HomePage = () => {
                   {
                     title: "Exceptional Quality",
                     desc: "We use only the finest materials, hallmarked and certified for purity.",
+                    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
                   },
                   {
                     title: "Ethical Sourcing",
                     desc: "Every gem is responsibly sourced, respecting both craft and nature.",
+                    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
                   },
                   {
                     title: "Timeless Design",
                     desc: "Blending tradition with modern artistry — made to last generations.",
+                    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
                   },
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="rounded-lg border border-[#366347] bg-[#1b3124] p-5 text-left"
+                    className="rounded-lg border border-[#366347] bg-[#1b3124] p-5 text-left relative"
                   >
-                    <h2 className="text-white text-base font-bold">{item.title}</h2>
-                    <p className="text-[#96c5a8] text-sm mt-1">{item.desc}</p>
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="absolute inset-0 w-full h-full object-cover opacity-20 rounded-lg"
+                    />
+                    <div className="relative z-10">
+                      <h2 className="text-white text-base font-bold">{item.title}</h2>
+                      <p className="text-[#96c5a8] text-sm mt-1">{item.desc}</p>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Visit Us Section */}
-            <div className="text-center py-10">
-              <h2 className="text-[#96c5a8] text-2xl sm:text-3xl font-bold leading-tight">
-                Visit Us in Raipur (C.G)
-              </h2>
-              <p className="text-[#c5dceb] text-sm sm:text-base mt-3 mb-5">
-                DM us on Instagram for gemstone consultations or to craft your custom design.  
-                Let’s create something that’s truly yours.
-              </p>
-              <button
-                className="flex mx-auto items-center justify-center rounded-lg h-10 sm:h-12 px-5 bg-[#96c5a8] text-white text-sm sm:text-base font-bold hover:bg-[#a0d1b9] transition-colors"
-                onClick={() => window.open("https://www.instagram.com/gems_n_jewelleryby_shruti/", "_blank")}
-              >
-                Connect on Instagram
-              </button>
+            {/* Visit Us Section with Image */}
+            <div className="text-center py-10 relative">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE"
+                alt="Raipur Location"
+                className="absolute inset-0 w-full h-full object-cover opacity-10 rounded-lg"
+              />
+              <div className="relative z-10">
+                <h2 className="text-[#96c5a8] text-2xl sm:text-3xl font-bold leading-tight">
+                  Visit Us in Raipur (C.G)
+                </h2>
+                <p className="text-[#c5dceb] text-sm sm:text-base mt-3 mb-5">
+                  DM us on Instagram for gemstone consultations or to craft your custom design.  
+                  Let’s create something that’s truly yours.
+                </p>
+                <button
+                  className="flex mx-auto items-center justify-center rounded-lg h-10 sm:h-12 px-5 bg-[#96c5a8] text-white text-sm sm:text-base font-bold hover:bg-[#a0d1b9] transition-colors"
+                  onClick={() => window.open("https://www.instagram.com/gems_n_jewelleryby_shruti/", "_blank")}
+                >
+                  Connect on Instagram
+                </button>
+              </div>
             </div>
           </div>
         </div>
