@@ -151,7 +151,7 @@ const HomePage = () => {
               </p>
               <button
                 className="flex mx-auto items-center justify-center rounded-lg h-10 sm:h-12 px-5 bg-[#96c5a8] text-white text-sm sm:text-base font-bold hover:bg-[#a0d1b9] transition-colors"
-                onClick={() => window.open("https://www.instagram.com/gemjewellerybyshruti", "_blank")}
+                onClick={() => window.open("https://www.instagram.com/gems_n_jewelleryby_shruti/", "_blank")}
               >
                 Connect on Instagram
               </button>
