@@ -11,9 +11,11 @@ const HomePage = () => {
           <div className="layout-content-container flex flex-col max-w-full sm:max-w-[960px] w-full flex-1">
             {/* Hero Section */}
             <div className="rounded-lg overflow-hidden mb-6">
-              <div className="relative min-h-[400px] sm:min-h-[480px] bg-cover bg-center bg-no-repeat p-4 sm:p-6"
+              <div
+                className="relative min-h-[400px] sm:min-h-[480px] bg-cover bg-center bg-no-repeat p-4 sm:p-6"
                 style={{
-                  backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE")',
+                  backgroundImage:
+                    'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE")',
                 }}
               >
                 <div className="flex flex-col items-center justify-center h-full text-center gap-4 sm:gap-6">
@@ -51,31 +53,31 @@ const HomePage = () => {
               {[
                 {
                   text: "Every grade of Diamond available",
-                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
+                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCBCooC60l_c_P9KIQ7HQ8qa17YkP-l1NSRNsZl3OayoLM7JqCuEpu8ET8QyJ9ODy3bI-uRb338jXYzViyJ2Sibo-WSjsHufSnwgRq5M6KkxiwPo2yeIEU0hQ66qkcRfVLea1XG6AvKPVVrq06gSTWEWvhX2aNC4c4H_I-z-qk1ZDcsrgGWeSytdbgkJvM_yU_ki-uayLYimID1gqnrga3zoDFgOkNtowADBUjf8J78QsYtCnCWcifiHwddueDl4I3ASdk6p3u5noE",
                 },
                 {
                   text: "100% Natural & Authorized Gemstones",
-                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
+                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBf8kdZYPVMrKOtBbEs5iOsCdQZtEBjI_gEzWVqbcvfWBJhzKRFWiRAIxsU8GUVa2CzshEd4ZgRsB5DS5z2e7ZHkHKAXaop3cZ-DOYhK7MjMGpKf-dVX2elhNvzllr5Fk6n5JidrgWRnF9N0rzYV93NURqDIzMcorF657ZzLlbFVrhpnFiIL97kRDPXtdNkWSoJtBuXmumTIDyOOV4TcpDs0yNhlk4yLtSRxU8PMC8dnXoXXL-ATkV_RXO7VbiLKuyHIIPnBhfyN3E",
                 },
                 {
                   text: "CIG Certified | Gemologist Approved",
-                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
+                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAVyX6DzQKzl5-ehKocBoQsJvOqRd0UWLR00J6s1JfH0RR-iak0IKhLPzbJG5vA2l9qcc2uBI34h8CUvFY9IDzjutHzJF4iE-97wDLEHtiZpMZ7NUBCcxGutFJrDCLX-RNzrE9CxepwDNPYLgcqwDEmw99N4UcEL2kAg1ctcYEyUQXP9_W7FDr4jdvQr2RTVvOybRjPadU6c6Ne6EoJQ6RcnF9uv1GSyUC4TNLYCPwYMTuuyl8eus8n4OdAYswTEgnN1L6zXzaXIR8",
                 },
                 {
                   text: "18K, 20K, 22K & 23K Gold Jewellery at Minimum Making Charges",
-                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
+                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBFS1r682k1pcx5wBwgMQ6Rhd3D6bIhZ7hHU9vVoEcf9MDuB2wSbPZOnRELs0o4fU8kYd8d29L0kNrC8wA8hq7VHc3SV2AqWbWo9Errlofz0MQ-PTSOMocKaDEOXfbdAlezCa8OB_-m1x4rLRdnSn0L67mWJ2dVlzOxXcMU1KS45sC9g4dczzfZVFEI69G2EqlFRz8BAhTbeYS04XA0CroucJniEse8fAtRUp3kTsNaL_WFXy3iYqeKvzW4IA5QXq4uPtbBVZYDj4I",
                 },
                 {
                   text: "Silver Jewellery designed & personalized to your taste",
-                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
+                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDkyId_A7-dWpHBWAzJaoKlCZ8verDi0MUYyAsLtHqdfQI39J9KTX1FWP_yLdN4Jc-DusiED5zFnVCIz6Fgvx3PVKE8daCGQ12xk-r2g-kgZ6mITuPEkeenM73mZV97pA7rb3n7Arc8iI9zPFZLcBlHoxzNSCgsdOnzYikfXBLV6TNqa2fYwup2hwhDFeqn60CCH5TKyPiFbWpwTnvfn11QRQgPtlQvAG1lsuyKBczrbZ4ZcY0Fm2XNxfrf3az4QNZcnHsT3gvPKjM",
                 },
                 {
                   text: "Hallmark Jewellery only — because purity isn’t optional",
-                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
+                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZZmk2lZC6x80lPogjYXOyQcB2Pz5bI89yGX1k8iPjT8Y1tuB2vBSuP5L2zR-EczxSV5YObFFmFA3jAcjjWmpF8IxtCJQLnKv7f1zVhI7lmekwT6xpUg5koyWJa7ZRLW4CeEl1CQ8OmL6rP6RbYskPAmaJaffyjcbKPFz-Vx8qCgXusJNuKUbR-YzNW5z5LkTjan5XIy5yPDyd0LEaX0tRa-W0C0mlOHIMfB3jv5r2B96j_gY4vA8oN4oJmGmWwgXX6NA5zYfMn5U",
                 },
                 {
                   text: "Bespoke Custom Designs made just for you",
-                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
+                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAVyX6DzQKzl5-ehKocBoQsJvOqRd0UWLR00J6s1JfH0RR-iak0IKhLPzbJG5vA2l9qcc2uBI34h8CUvFY9IDzjutHzJF4iE-97wDLEHtiZpMZ7NUBCcxGutFJrDCLX-RNzrE9CxepwDNPYLgcqwDEmw99N4UcEL2kAg1ctcYEyUQXP9_W7FDr4jdvQr2RTVvOybRjPadU6c6Ne6EoJQ6RcnF9uv1GSyUC4TNLYCPwYMTuuyl8eus8n4OdAYswTEgnN1L6zXzaXIR8",
                 },
               ].map((item, i) => (
                 <div
@@ -101,17 +103,17 @@ const HomePage = () => {
                 {
                   title: "Radiant Rings",
                   desc: "Handcrafted rings that redefine timeless beauty.",
-                  img: "https://images.unsplash.com/photo-1600181950916-dc46e6b8a7c3?auto=format&fit=crop&w=600&q=80",
+                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBFS1r682k1pcx5wBwgMQ6Rhd3D6bIhZ7hHU9vVoEcf9MDuB2wSbPZOnRELs0o4fU8kYd8d29L0kNrC8wA8hq7VHc3SV2AqWbWo9Errlofz0MQ-PTSOMocKaDEOXfbdAlezCa8OB_-m1x4rLRdnSn0L67mWJ2dVlzOxXcMU1KS45sC9g4dczzfZVFEI69G2EqlFRz8BAhTbeYS04XA0CroucJniEse8fAtRUp3kTsNaL_WFXy3iYqeKvzW4IA5QXq4uPtbBVZYDj4I",
                 },
                 {
                   title: "Elegant Necklaces",
                   desc: "Necklaces that capture sophistication and grace.",
-                  img: "https://images.unsplash.com/photo-1600180758890-6dc538ecf5f3?auto=format&fit=crop&w=600&q=80",
+                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDkyId_A7-dWpHBWAzJaoKlCZ8verDi0MUYyAsLtHqdfQI39J9KTX1FWP_yLdN4Jc-DusiED5zFnVCIz6Fgvx3PVKE8daCGQ12xk-r2g-kgZ6mITuPEkeenM73mZV97pA7rb3n7Arc8iI9zPFZLcBlHoxzNSCgsdOnzYikfXBLV6TNqa2fYwup2hwhDFeqn60CCH5TKyPiFbWpwTnvfn11QRQgPtlQvAG1lsuyKBczrbZ4ZcY0Fm2XNxfrf3az4QNZcnHsT3gvPKjM",
                 },
                 {
                   title: "Dazzling Earrings",
                   desc: "Earrings that reflect your inner brilliance.",
-                  img: "https://images.unsplash.com/photo-1600180758895-7b1a6bb23f41?auto=format&fit=crop&w=600&q=80",
+                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZZmk2lZC6x80lPogjYXOyQcB2Pz5bI89yGX1k8iPjT8Y1tuB2vBSuP5L2zR-EczxSV5YObFFmFA3jAcjjWmpF8IxtCJQLnKv7f1zVhI7lmekwT6xpUg5koyWJa7ZRLW4CeEl1CQ8OmL6rP6RbYskPAmaJaffyjcbKPFz-Vx8qCgXusJNuKUbR-YzNW5z5LkTjan5XIy5yPDyd0LEaX0tRa-W0C0mlOHIMfB3jv5r2B96j_gY4vA8oN4oJmGmWwgXX6NA5zYfMn5U",
                 },
               ].map((item, i) => (
                 <div
@@ -145,17 +147,17 @@ const HomePage = () => {
                   {
                     title: "Exceptional Quality",
                     desc: "We use only the finest materials, hallmarked and certified for purity.",
-                    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
+                    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCBCooC60l_c_P9KIQ7HQ8qa17YkP-l1NSRNsZl3OayoLM7JqCuEpu8ET8QyJ9ODy3bI-uRb338jXYzViyJ2Sibo-WSjsHufSnwgRq5M6KkxiwPo2yeIEU0hQ66qkcRfVLea1XG6AvKPVVrq06gSTWEWvhX2aNC4c4H_I-z-qk1ZDcsrgGWeSytdbgkJvM_yU_ki-uayLYimID1gqnrga3zoDFgOkNtowADBUjf8J78QsYtCnCWcifiHwddueDl4I3ASdk6p3u5noE",
                   },
                   {
                     title: "Ethical Sourcing",
                     desc: "Every gem is responsibly sourced, respecting both craft and nature.",
-                    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
+                    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBf8kdZYPVMrKOtBbEs5iOsCdQZtEBjI_gEzWVqbcvfWBJhzKRFWiRAIxsU8GUVa2CzshEd4ZgRsB5DS5z2e7ZHkHKAXaop3cZ-DOYhK7MjMGpKf-dVX2elhNvzllr5Fk6n5JidrgWRnF9N0rzYV93NURqDIzMcorF657ZzLlbFVrhpnFiIL97kRDPXtdNkWSoJtBuXmumTIDyOOV4TcpDs0yNhlk4yLtSRxU8PMC8dnXoXXL-ATkV_RXO7VbiLKuyHIIPnBhfyN3E",
                   },
                   {
                     title: "Timeless Design",
                     desc: "Blending tradition with modern artistry — made to last generations.",
-                    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE",
+                    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAVyX6DzQKzl5-ehKocBoQsJvOqRd0UWLR00J6s1JfH0RR-iak0IKhLPzbJG5vA2l9qcc2uBI34h8CUvFY9IDzjutHzJF4iE-97wDLEHtiZpMZ7NUBCcxGutFJrDCLX-RNzrE9CxepwDNPYLgcqwDEmw99N4UcEL2kAg1ctcYEyUQXP9_W7FDr4jdvQr2RTVvOybRjPadU6c6Ne6EoJQ6RcnF9uv1GSyUC4TNLYCPwYMTuuyl8eus8n4OdAYswTEgnN1L6zXzaXIR8",
                   },
                 ].map((item, i) => (
                   <div
@@ -179,7 +181,7 @@ const HomePage = () => {
             {/* Visit Us Section with Image */}
             <div className="text-center py-10 relative">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVC7jOHcUPE8YS_j2qZqsCSaJ2Pie137RFpiYmh28bydDmdBfS6zDzkFLh_ETyM-slpCS-TYYRXNaZej11ol9NP6wE3EZ9fZm5Vu3610r_oi6CH5rd0gECaJfWSTI8101Fsl1cnpilcaeIPNg6HZQ--w3Jdvs04hI6cOScsHiMxBnyXGqil7E3Pq7uz9WrOw3RQMhFnqeMlsetGEYaDlanO7Sx5TCsUcLDmFVpBvXrv5d3nLWt-azKQti60d4iIPraUgDl5qMo7OE"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFS1r682k1pcx5wBwgMQ6Rhd3D6bIhZ7hHU9vVoEcf9MDuB2wSbPZOnRELs0o4fU8kYd8d29L0kNrC8wA8hq7VHc3SV2AqWbWo9Errlofz0MQ-PTSOMocKaDEOXfbdAlezCa8OB_-m1x4rLRdnSn0L67mWJ2dVlzOxXcMU1KS45sC9g4dczzfZVFEI69G2EqlFRz8BAhTbeYS04XA0CroucJniEse8fAtRUp3kTsNaL_WFXy3iYqeKvzW4IA5QXq4uPtbBVZYDj4I"
                 alt="Raipur Location"
                 className="absolute inset-0 w-full h-full object-cover opacity-10 rounded-lg"
               />
