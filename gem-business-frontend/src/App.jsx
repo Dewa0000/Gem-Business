@@ -17,6 +17,7 @@ import ProtectedRoutes from './Routes/ProtectedRoutes'
 import GemRecommendation from './Pages/Gem-Recommendation'
 import PaymentPage from './Pages/paymentpage'
 import ProductInfo from './Pages/ProductInfo'
+import ContactUsPage from './Pages/ContactUs'
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
             <Route path='/gem-recommendation' element={<GemRecommendation/>}></Route>
             <Route path='/payment' element={<PaymentPage/>}></Route>
             <Route path="/product/:id" element={<ProductInfo />} />
+            <Route path="/contact-us" element={<ContactUsPage />} />
           </Routes>
           <Footer />
         </Router>
