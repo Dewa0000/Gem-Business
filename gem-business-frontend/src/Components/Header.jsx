@@ -16,7 +16,7 @@ const Header = () => {
     { label: "Home", path: "/" },
     { label: "Gemstones", path: "/products" },
     { label: "About Us", path: "/about-us" },
-    { label: "Shop", path: "/products" },
+    { label: "Blogs", path: "/blogs" },
     { label: "Gem Recommendation", path: "/gem-recommendation" },
     { label: "Contact Us", path: "/contact-us" },
   ];
