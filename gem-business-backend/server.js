@@ -32,7 +32,8 @@ app.use("/products",productRoutes);
 app.use("/checkout", orderRoutes);
 app.use("/my-orders",orderRoutes);
 app.use("/cart", cartRoutes)
-app.use("/payment", paymentRoutes)
+app.use("/payment", paymentRoutes);
+app.use("/blogs", blogRoutes);
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
