@@ -7,6 +7,8 @@ const productRoutes = require("./Routes/productRoutes.js")
 const orderRoutes = require("./Routes/orderRoute.js")
 const cartRoutes = require("./Routes/cartRoute.js")
 const paymentRoutes = require("./Routes/paymentRoutes.js")
+const blogRoutes = require("./Routes/blogRoutes.js")
+
 
 dotenv.config();
 
