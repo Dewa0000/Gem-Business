@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const BlogPage = () => {
+const BlogsPage = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -75,4 +75,4 @@ const BlogPage = () => {
   );
 };
 
-export default BlogPage;
+export default BlogsPage;
