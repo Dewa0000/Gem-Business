@@ -14,7 +14,7 @@ const BlogPost = () => {
         if (!res.ok) throw new Error("Blog not found");
         return res.json();
       })
-      .then((data) => setPost(data)) // Assuming response is the blog object directly
+      .then((data) => setPost(data.blog)) // Assuming response is the blog object directly
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
   }, [id]);
