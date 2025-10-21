@@ -41,6 +41,7 @@ const BlogPost = () => {
               <img
                 src={post.imageURL}
                 alt={post.title}
+                style={{ objectPosition: "center" }}
                 className="w-full h-64 object-cover rounded-lg mb-6"
                 onError={(e) => (e.target.src = "https://via.placeholder.com/300x200?text=No+Image")}
               />
