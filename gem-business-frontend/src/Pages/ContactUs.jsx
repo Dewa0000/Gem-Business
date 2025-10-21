@@ -30,8 +30,8 @@ const ContactUsPage = () => {
                 </p>
                 <h2 className="text-[#96c5a8] text-xl sm:text-2xl font-bold mt-6 mb-4">Contact Details</h2>
                 <p className="text-[#e8f3ec] text-sm sm:text-base leading-relaxed">
-                  Email: info@gemsbyshruti.com <br />
-                  Phone: +91-123-456-7890 <br />
+                  Email: dewashishsahu8888@gmail.com <br />
+                  Phone: +91 - 8962510398 <br />
                   Instagram: @gems_n_jewelleryby_shruti
                 </p>
               </div>
